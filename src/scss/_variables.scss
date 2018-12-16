@@ -1,0 +1,40 @@
+$base-font-size: 10;
+
+$breakpoint-xxs:    480px;
+$breakpoint-xs:     640px;
+$breakpoint-s:      768px;
+$breakpoint-m:      840px;
+$breakpoint-l:      960px;
+$breakpoint-xl:     1280px;
+$breakpoint-xxl:    1366px;
+$breakpoint-3xl:    1600px;
+$breakpoint-4xl:    1920px;
+
+$theme: (
+  font-primary: (Josefin Sans, sans-serif),
+
+  font-weight-light:  300,
+  font-weight-normal: 400,
+  font-weight-bold:   600,
+
+  text-primary:     rgb(0, 0, 0),
+  text-secondary:   rgb(255, 255, 255),
+  text-alternative: rgb(91, 91, 91),
+
+  color-primary:   rgb(13, 108, 180),
+  color-secondary: rgb(242, 0, 74),
+
+  button-positive:  rgb(242, 0, 74),
+  button-negative:  rgb(0, 0, 0),
+  button-neutral:   rgb(255, 255, 255),
+
+  panel-primary:   rgb(230, 230, 230),
+  panel-secondary: rgb(255, 255, 255),
+
+  line-primary:     rgb(254, 254, 254),
+  line-secondary:   rgb(255, 255, 255),
+  line-alternative: rgb(255, 255, 255),
+
+  background-primary:   rgb(255, 255, 255),
+  background-secondary: rgb(0, 0, 0)
+);

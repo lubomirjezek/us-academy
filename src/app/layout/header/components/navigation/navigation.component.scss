@@ -1,0 +1,27 @@
+@import "../../../../../scss/variables";
+
+.navigation {
+  display: flex;
+  list-style: none;
+}
+
+.navigation__item {
+  margin-right: 5rem;
+}
+
+.navigation__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: map-get($theme, text-secondary);
+  font-size: 1.8rem;
+  transition: color 200ms;
+
+  &:hover {
+    color: map-get($theme, color-primary);
+  }
+}
+
+
+.navigation--scrolled .navigation__link {
+  font-size: 1.6rem;
+}

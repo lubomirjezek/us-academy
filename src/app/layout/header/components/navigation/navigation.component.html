@@ -1,0 +1,5 @@
+<ul class="navigation">
+  <li class="navigation__item" *ngFor="let link of links">
+    <a class="navigation__link" [href]="link.url">{{ link.name }}</a>
+  </li>
+</ul>

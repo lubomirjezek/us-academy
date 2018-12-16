@@ -5,13 +5,13 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './pages/homepage/homepage.module#HomepageModule'
-  }, {
+  }/*, {
     path: 'gdpr',
     loadChildren: './pages/gdpr/gdpr.module#GDPRModule'
   }, {
     path: 'detail',
     loadChildren: './pages/detail/detail.module#DetailModule'
-  }
+  }*/
 ];
 
 @NgModule({

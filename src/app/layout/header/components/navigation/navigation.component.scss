@@ -23,7 +23,7 @@
     color: map-get($theme, color-primary);
   }
 
-  .navigation--scrolled & {
+  /deep/ .scrolled & {
     font-size: 1.8rem;
     color: map-get($theme, text-primary);
   }

@@ -5,8 +5,8 @@
 }
 
 html, body {
-  height: 100%;
-  overflow: auto;
+  //height: 100%;
+  //overflow: auto;
 }
 
 html {
@@ -19,6 +19,8 @@ body {
   font-family: map-get($theme, font-primary);
   font-weight: map-get($theme, font-weight-light);
   background: map-get($theme, background-primary) url("assets/bg.jpg") no-repeat top center;
+  background-attachment: fixed;
+  background-size:100% auto;
   color: map-get($theme, text-primary);
   letter-spacing: 0.1rem;
 }

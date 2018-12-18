@@ -13,15 +13,18 @@
   text-decoration: none;
   text-transform: uppercase;
   color: map-get($theme, text-secondary);
-  font-size: 1.8rem;
-  transition: color 200ms;
+  font-size: 2rem;
+  transition: color 150ms;
+  font-family: map-get($theme, font-secondary);
+  font-weight: map-get($theme, font-weight-bold);
+  letter-spacing: 0.3rem;
 
   &:hover {
     color: map-get($theme, color-primary);
   }
-}
 
-
-.navigation--scrolled .navigation__link {
-  font-size: 1.6rem;
+  .navigation--scrolled & {
+    font-size: 1.8rem;
+    color: map-get($theme, text-primary);
+  }
 }

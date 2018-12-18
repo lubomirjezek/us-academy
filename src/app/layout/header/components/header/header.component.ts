@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnInit } from '@angular/core';
+
 import { Link } from '../../../../models/link';
+import { WINDOW } from '../../../../app.config';
 
 @Component({
   selector: 'usacademy-header',
@@ -8,13 +10,15 @@ import { Link } from '../../../../models/link';
 })
 export class HeaderComponent implements OnInit {
 
+  isScrolled: boolean;
+
   navigation: Link[] = [
     {
       url: '#o-nas',
       name: 'O Nás'
     }, {
-      url: '#vyber-krouzku',
-      name: 'Výběr kroužků'
+      url: '#vyber-mest',
+      name: 'Výběr měst'
     }, {
       url: '#kontakt',
       name: 'Kontakt'
@@ -22,8 +26,15 @@ export class HeaderComponent implements OnInit {
   ];
   socialMedias: Link[] = [];
 
-  constructor() { }
+  constructor(
+    @Inject(WINDOW) private window: Window
+  ) { }
 
   ngOnInit() { }
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    this.isScrolled = this.window.pageYOffset > 0;
+  }
 
 }

@@ -17,6 +17,6 @@ body {
   line-height: 1.5;
   font-family: map-get($theme, font-primary);
   font-weight: map-get($theme, font-weight-normal);
-  background: map-get($theme, background-primary) url("assets/bg.jpg") no-repeat center center;
+  background: map-get($theme, background-primary) url("assets/bg.jpg") no-repeat top center;
   color: map-get($theme, text-primary);
 }

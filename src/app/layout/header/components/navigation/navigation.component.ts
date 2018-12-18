@@ -9,6 +9,7 @@ import { Link } from '../../../../models/link';
 })
 export class NavigationComponent implements OnInit {
 
+  @Input() isScrolled: boolean;
   @Input() links: Link[];
 
   constructor() { }

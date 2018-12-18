@@ -1,4 +1,4 @@
-<ul class="navigation">
+<ul class="navigation" [class.navigation--scrolled]="isScrolled">
   <li class="navigation__item" *ngFor="let link of links">
     <a class="navigation__link" [href]="link.url">{{ link.name }}</a>
   </li>

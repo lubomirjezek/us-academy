@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IntroModule } from './layout/intro/intro.module';
 import { HeaderModule } from './layout/header/header.module';
+import { WINDOW } from './app.config';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { HeaderModule } from './layout/header/header.module';
     IntroModule,
     HeaderModule
   ],
-  providers: [],
+  providers: [
+    { provide: WINDOW, useValue: window }
+  ],
   bootstrap: [
     AppComponent
   ]

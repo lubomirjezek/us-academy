@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 import { Pin } from '../../../../models/pin';
 import { selectPins } from '../../reducers/homepage.reducer';
+import { GetPins } from '../../actions/homepage.actions';
 
 @Component({
   selector: 'usacademy-homepage',
@@ -36,10 +37,17 @@ export class HomepageComponent implements OnInit {
       .pipe(
         select(selectPins)
       );
+
+    this.fetchPins();
   }
 
   onIntersection(event): void {
     this.isVisible = event.visible;
+  }
+
+  fetchPins(): void {
+    this.store
+      .dispatch(new GetPins());
   }
 
 }

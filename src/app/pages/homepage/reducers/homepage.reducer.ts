@@ -1,39 +1,52 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
 import { Pin } from '../../../models/pin';
+import { All, GET_PINS, GET_PINS_ERROR, GET_PINS_SUCCESS } from '../actions/homepage.actions';
+import { StoreData } from '../../../models/store-data';
 
 export interface State {
-  pins: Pin[];
+  pins: StoreData<Pin[]>;
 }
 
 export const initialState: State = {
-  pins: [
-    {
-      x: 36,
-      y: 62
-    }, {
-      x: 40,
-      y: 71
-    }, {
-      x: 46,
-      y: 63
-    }, {
-      x: 47,
-      y: 71
-    }, {
-      x: 51,
-      y: 61
-    }, {
-      x: 55,
-      y: 70
-    }
-  ]
+  pins: {
+    loaded: false,
+    loading: false,
+    data: []
+  }
 };
 
 export const featureName = 'homepage';
 
-export function reducer(state = initialState, action) {
+export function reducer(state = initialState, action: All) {
   switch (action.type) {
+    case GET_PINS:
+      return {
+        ...state,
+        pins: {
+          ...state.pins,
+          loaded: false,
+          loading: true
+        }
+      };
+    case GET_PINS_SUCCESS:
+      return {
+        ...state,
+        pins: {
+          loaded: true,
+          loading: false,
+          data: action.payload
+        }
+      };
+    case GET_PINS_ERROR:
+      return {
+        ...state,
+        pins: {
+          loaded: true,
+          loading: false,
+          data: []
+        }
+      };
     default: {
       return state;
     }
@@ -42,4 +55,4 @@ export function reducer(state = initialState, action) {
 
 export const featureSelector = createFeatureSelector<State>(featureName);
 
-export const selectPins = createSelector(featureSelector, state => state.pins);
+export const selectPins = createSelector(featureSelector, state => state.pins.data);

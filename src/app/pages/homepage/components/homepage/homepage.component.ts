@@ -4,8 +4,9 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 
 import { Pin } from '../../../../models/pin';
-import { selectPins } from '../../reducers/homepage.reducer';
+import { selectCity, selectPins } from '../../reducers/homepage.reducer';
 import { GetPins } from '../../actions/homepage.actions';
+import { City } from '../../../../models/city';
 
 @Component({
   selector: 'usacademy-homepage',
@@ -26,7 +27,9 @@ import { GetPins } from '../../actions/homepage.actions';
 export class HomepageComponent implements OnInit {
 
   isVisible = false;
+
   pins: Observable<Pin[]>;
+  city: Observable<City>;
 
   constructor(
     private store: Store<any>
@@ -36,6 +39,11 @@ export class HomepageComponent implements OnInit {
     this.pins = this.store
       .pipe(
         select(selectPins)
+      );
+
+    this.city = this.store
+      .pipe(
+        select(selectCity)
       );
 
     this.fetchPins();

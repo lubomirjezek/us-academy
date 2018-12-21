@@ -5,7 +5,16 @@ import { Action } from '@ngrx/store';
 import { catchError, delay, map, switchMap } from 'rxjs/operators';
 
 import { DataService } from '../services/data.service';
-import { GET_PINS, GetPins, GetPinsError, GetPinsSuccess } from '../actions/homepage.actions';
+import {
+  GET_CITY,
+  GET_PINS,
+  GetCity,
+  GetCityError,
+  GetCitySuccess,
+  GetPins,
+  GetPinsError,
+  GetPinsSuccess
+} from '../actions/homepage.actions';
 
 @Injectable()
 export class HomepageEffects {
@@ -16,16 +25,29 @@ export class HomepageEffects {
   ) { }
 
   @Effect()
-  getCategoryCategories: Observable<Action> = this.actions
+  getPins: Observable<Action> = this.actions
     .pipe(
       ofType(GET_PINS),
       switchMap((action: GetPins) => {
         return this.dataService
           .getPins()
           .pipe(
-            delay(2000),
             map(response => new GetPinsSuccess(response)),
             catchError(response => of(new GetPinsError(response)))
+          );
+      }),
+    );
+
+  @Effect()
+  getCity: Observable<Action> = this.actions
+    .pipe(
+      ofType(GET_CITY),
+      switchMap((action: GetCity) => {
+        return this.dataService
+          .getCity(action.payload.id)
+          .pipe(
+            map(response => new GetCitySuccess(response)),
+            catchError(response => of(new GetCityError(response)))
           );
       }),
     );

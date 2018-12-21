@@ -1,5 +1,7 @@
 <div class="map">
-  <img src="assets/map.png" alt="Česká republika">
+  <div class="map__container">
+    <img class="map__img" src="assets/map.png" alt="Česká republika">
 
-
+    <usacademy-pin class="map__pin" *ngFor="let pin of pins" [x]="pin.x" [y]="pin.y"></usacademy-pin>
+  </div>
 </div>

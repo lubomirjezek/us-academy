@@ -1,0 +1,33 @@
+@import "../../../../../scss/variables";
+
+.list {
+  list-style: none;
+  display: flex;
+}
+
+.list__item {
+  margin-left: 3rem;
+}
+
+.list__link {
+  text-decoration: none;
+  color: map-get($theme, text-secondary);
+  transition: color 150ms, font-size 150ms;
+
+  &:hover {
+    color: map-get($theme, color-primary);
+  }
+
+  /deep/ .scrolled & {
+    color: map-get($theme, text-primary);
+  }
+}
+
+.list__icon {
+  font-size: 2.5rem;
+  color: inherit;
+
+  /deep/ .scrolled & {
+    font-size: 2.2rem;
+  }
+}

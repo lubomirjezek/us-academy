@@ -1,2 +1,7 @@
-<ui-icon>fb</ui-icon>
-<ui-icon>ig</ui-icon>
+<ul class="list">
+  <li class="list__item" *ngFor="let link of links">
+    <a [href]="link.url" target="_blank" class="list__link">
+      <ui-icon class="list__icon">{{ link.name }}</ui-icon>
+    </a>
+  </li>
+</ul>

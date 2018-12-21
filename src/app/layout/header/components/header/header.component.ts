@@ -21,7 +21,15 @@ export class HeaderComponent implements OnInit {
       name: 'Kontakt'
     }
   ];
-  socialMedias: Link[] = [];
+  socialMedias: Link[] = [
+    {
+      url: 'https://www.facebook.com/Urban-Sense-Academy-1621345168099222/',
+      name: 'fb'
+    }, {
+      url: 'https://www.instagram.com/urbansenseacademy/',
+      name: 'ig'
+    }
+  ];
 
   constructor() { }
 

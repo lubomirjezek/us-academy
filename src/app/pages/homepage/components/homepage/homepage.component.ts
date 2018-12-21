@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+
+import { Pin } from '../../../../models/pin';
+import { selectPins } from '../../reducers/homepage.reducer';
 
 @Component({
   selector: 'usacademy-homepage',
@@ -20,10 +25,18 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
 export class HomepageComponent implements OnInit {
 
   isVisible = false;
+  pins: Observable<Pin[]>;
 
-  constructor() { }
+  constructor(
+    private store: Store<any>
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.pins = this.store
+      .pipe(
+        select(selectPins)
+      );
+  }
 
   onIntersection(event): void {
     this.isVisible = event.visible;

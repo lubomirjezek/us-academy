@@ -2,3 +2,8 @@
 
 @import "scss/variables";
 @import "scss/reset";
+@import "scss/fonts";
+
+@import "app/ui/core/styles/theme";
+
+@include create-theme($theme);

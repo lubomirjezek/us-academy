@@ -1,0 +1,5 @@
+@import "../../icon/components/icon/icon-theme";
+
+@mixin create-theme($theme) {
+  @include icon-theme($theme);
+}

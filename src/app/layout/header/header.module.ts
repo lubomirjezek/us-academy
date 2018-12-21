@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { SocialMediasComponent } from './components/social-medias/social-medias.component';
+import { IconModule } from '../../ui/icon/icon.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SocialMediasComponent } from './components/social-medias/social-medias.
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    IconModule
   ]
 })
 export class HeaderModule { }

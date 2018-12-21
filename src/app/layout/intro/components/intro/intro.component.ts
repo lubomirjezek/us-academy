@@ -14,7 +14,7 @@ import { fade } from '../../../../animations/fade.animation';
           params: {
             opacityStart: 1,
             opacityEnd: 0,
-            timings: '400ms cubic-bezier(.35,0,.25,1)'
+            timings: '600ms cubic-bezier(.35,0,.25,1)'
           }
         })
       ])

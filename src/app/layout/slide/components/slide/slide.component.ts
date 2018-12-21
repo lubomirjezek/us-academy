@@ -9,12 +9,10 @@ import { DOCUMENT } from '../../../../app.config';
 })
 export class SlideComponent implements OnInit {
   @HostBinding('style.height.px') height: number;
-  @HostBinding('style.width.px') width: number;
 
   constructor(
     @Inject(DOCUMENT) private document: Document
   ) {
-    // this.width  = this.document.documentElement.clientWidth;
     this.height = this.document.documentElement.clientHeight;
   }
 
@@ -22,7 +20,6 @@ export class SlideComponent implements OnInit {
 
   @HostListener('window:resize')
   onResize(): void {
-    // this.width  = this.document.documentElement.clientWidth;
     this.height = this.document.documentElement.clientHeight;
   }
 

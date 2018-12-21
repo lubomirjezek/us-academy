@@ -11,15 +11,14 @@ import { WINDOW } from './app.config';
 export class AppComponent implements AfterViewInit {
 
   @HostBinding('class.scrolled') isScrolled = false;
-
-  showInto = true;
+  @HostBinding('class.intro') showInto = true;
 
   constructor(
     @Inject(WINDOW) private window: Window
   ) { }
 
   ngAfterViewInit() {
-    timer(700)
+    timer(800)
       .subscribe(() => this.showInto = false);
   }
 

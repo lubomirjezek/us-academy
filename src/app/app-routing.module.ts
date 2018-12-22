@@ -5,10 +5,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: './pages/homepage/homepage.module#HomepageModule'
-  }/*, {
-    path: 'gdpr',
-    loadChildren: './pages/gdpr/gdpr.module#GDPRModule'
   }, {
+    path: 'gdpr',
+    loadChildren: './pages/gdpr/gdpr.module#GdprModule'
+  }/*, {
     path: 'detail',
     loadChildren: './pages/detail/detail.module#DetailModule'
   }*/

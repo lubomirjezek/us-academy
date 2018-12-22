@@ -1,5 +1,12 @@
 @import "../../../../../scss/variables";
 
+:host {
+  display: block;
+  background: map-get($theme, background-primary) url("../../../../../assets/bg.jpg") no-repeat top center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 .slide {
   display: flex;
   align-items: center;

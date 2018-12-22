@@ -17,19 +17,34 @@ body {
   line-height: 1.5;
   font-family: map-get($theme, font-primary);
   font-weight: map-get($theme, font-weight-light);
-  background: map-get($theme, background-primary) url("assets/bg.jpg") no-repeat top center;
-  background-attachment: fixed;
+  // background: map-get($theme, background-primary) url("assets/bg.jpg") no-repeat top center;
+  // background-attachment: fixed;
   background-size:100% auto;
   color: map-get($theme, text-primary);
   letter-spacing: 0.1rem;
   overflow-y: scroll;
 }
 
-h2 {
+h1 {
   font-size: 6rem;
-  letter-spacing: 1rem;
+  letter-spacing: .8rem;
   text-transform: uppercase;
-  margin: 0 0 5rem 0;
+  margin: 5rem 0;
+  text-align: center;
   font-family: map-get($theme, font-secondary);
   font-weight: map-get($theme, font-weight-bold);
+}
+
+h2 {
+  font-size: 2.4rem;
+  letter-spacing: .4rem;
+  text-transform: uppercase;
+  margin: 5rem 0 2rem 0;
+  text-align: center;
+  font-family: map-get($theme, font-secondary);
+  font-weight: map-get($theme, font-weight-bold);
+}
+
+p {
+  margin: 2rem 0;
 }

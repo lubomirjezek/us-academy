@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IntroModule } from './layout/intro/intro.module';
-import { HeaderModule } from './layout/header/header.module';
 import { API_URL, DOCUMENT, WINDOW } from './app.config';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { API_URL, DOCUMENT, WINDOW } from './app.config';
     BrowserAnimationsModule,
     AppRoutingModule,
     IntroModule,
-    HeaderModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument(),

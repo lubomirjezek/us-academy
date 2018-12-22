@@ -1,12 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { HomepageComponent } from './components/homepage/homepage.component';
+import { GdprComponent } from './components/gdpr/gdpr.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomepageComponent
+    component: GdprComponent
   }
 ];
 
@@ -19,4 +19,4 @@ const routes: Routes = [
   ],
   declarations: []
 })
-export class HomepageRoutingModule { }
+export class GdprRoutingModule { }

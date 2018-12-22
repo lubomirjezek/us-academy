@@ -11,6 +11,7 @@ import { MapComponent } from './components/map/map.component';
 import { PinComponent } from './components/pin/pin.component';
 import { featureName, reducer } from './reducers/homepage.reducer';
 import { HomepageEffects } from './effects/homepage.effects';
+import { HeaderModule } from '../../layout/header/header.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HomepageEffects } from './effects/homepage.effects';
     CommonModule,
     HomepageRoutingModule,
     SlideModule,
+    HeaderModule,
     InViewportModule,
     StoreModule.forFeature(featureName, reducer),
     EffectsModule.forFeature([

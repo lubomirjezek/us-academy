@@ -35,6 +35,8 @@ export class HeaderComponent implements OnInit {
       .pipe(
         select(selectSocialMedias)
       );
+
+    this.onScroll();
   }
 
   @HostListener('window:scroll')

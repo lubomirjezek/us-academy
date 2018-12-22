@@ -40,7 +40,7 @@ export const initialState: State = {
   }
 };
 
-export const featureName = 'homepage';
+export const featureName = 'header';
 
 export function reducer(state = initialState, action: any) {
   switch (action.type) {

@@ -5,6 +5,12 @@
   display: flex;
 }
 
+.list--scrolled {
+  .list__link {
+    color: map-get($theme, text-primary);
+  }
+}
+
 .list__item {
   margin-left: 3rem;
 }
@@ -16,10 +22,6 @@
 
   &:hover {
     color: map-get($theme, color-primary);
-  }
-
-  /deep/ .scrolled & {
-    color: map-get($theme, text-primary);
   }
 }
 

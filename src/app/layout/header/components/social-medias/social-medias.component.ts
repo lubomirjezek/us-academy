@@ -9,6 +9,7 @@ import { Link } from '../../../../models/link';
 export class SocialMediasComponent implements OnInit {
 
   @Input() links: Link[];
+  @Input() isScrolled: boolean;
 
   constructor() { }
 

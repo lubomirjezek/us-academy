@@ -1,7 +1,5 @@
-import { AfterViewInit, Component, HostBinding, HostListener, Inject } from '@angular/core';
+import { AfterViewInit, Component, HostBinding } from '@angular/core';
 import { timer } from 'rxjs';
-
-import { WINDOW } from './app.config';
 
 @Component({
   selector: 'usacademy-root',
@@ -10,21 +8,13 @@ import { WINDOW } from './app.config';
 })
 export class AppComponent implements AfterViewInit {
 
-  @HostBinding('class.scrolled') isScrolled = false;
   @HostBinding('class.intro') showInto = true;
 
-  constructor(
-    @Inject(WINDOW) private window: Window
-  ) { }
+  constructor() { }
 
   ngAfterViewInit() {
     timer(800)
       .subscribe(() => this.showInto = false);
-  }
-
-  @HostListener('window:scroll')
-  onScroll(): void {
-    this.isScrolled = this.window.pageYOffset > 0;
   }
 
 }

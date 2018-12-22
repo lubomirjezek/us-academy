@@ -11,11 +11,15 @@
   right: 0;
   background-color: rgba(255, 255, 255, 0);
   z-index: 2;
+}
 
-  /deep/ .scrolled & {
-    height: 9rem;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: -1px 2px 0px 0px rgba(0, 0, 0, 0.14);
+.header--scrolled {
+  height: 9rem;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: -1px 2px 0px 0px rgba(0, 0, 0, 0.14);
+
+  .header__col--logo {
+    align-items: center;
   }
 }
 
@@ -32,10 +36,6 @@
 .header__col--logo {
   justify-content: center;
   align-items: flex-end;
-
-  /deep/ .scrolled & {
-    align-items: center;
-  }
 }
 
 .header__col--social-medias {

@@ -15,13 +15,15 @@ import { HomepageEffects } from './effects/homepage.effects';
 import { CityComponent } from './components/city/city.component';
 import { ContainerModule } from '../../layout/container/container.module';
 import { ButtonModule } from '../../ui/button/button.module';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
     HomepageComponent,
     MapComponent,
     PinComponent,
-    CityComponent
+    CityComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,

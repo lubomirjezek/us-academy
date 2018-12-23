@@ -1,0 +1,23 @@
+@import "../../../../../scss/variables";
+
+.contact {
+  background-color: map-get($theme, background-primary);
+  padding: 8rem 0 4rem 0;
+}
+
+.contact__link,
+.contact__line {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
+
+.contact__separator {
+  margin-top: 4rem;
+}
+
+.contact__link {
+  text-decoration: none;
+  color: map-get($theme, color-primary);
+}
+

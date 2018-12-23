@@ -14,13 +14,13 @@ export const initialState: State = {
     loading: false,
     data: [
       {
-        url: '#o-nas',
+        url: 'o-nas',
         name: 'O Nás'
       }, {
-        url: '#vyber-mest',
+        url: 'vyber-mest',
         name: 'Výběr měst'
       }, {
-        url: '#kontakt',
+        url: 'kontakt',
         name: 'Kontakt'
       }
     ]

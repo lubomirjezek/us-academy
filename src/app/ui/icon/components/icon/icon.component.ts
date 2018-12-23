@@ -16,7 +16,10 @@ import {
   styleUrls: ['./icon.component.scss'],
   encapsulation: ViewEncapsulation.None,
   preserveWhitespaces: false,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.ui-icon]': 'true'
+  }
 })
 export class IconComponent implements OnInit, OnChanges {
   readonly ICON_CLASS = 'ui-icon';
@@ -28,10 +31,7 @@ export class IconComponent implements OnInit, OnChanges {
     private renderer: Renderer2
   ) { }
 
-  ngOnInit() {
-    this.renderer
-      .addClass(this.elRef.nativeElement, this.ICON_CLASS);
-  }
+  ngOnInit() {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes.hasOwnProperty('color')) {

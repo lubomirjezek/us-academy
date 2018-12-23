@@ -6,11 +6,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .map__container {
+  margin-top: 2rem;
   position: relative;
   width: 111.2rem;
+  z-index: 1;
 }
 
 .map__img { }

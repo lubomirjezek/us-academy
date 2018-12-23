@@ -4,6 +4,7 @@ import { NavigationCancel, NavigationEnd, Router, RouterEvent } from '@angular/r
 import { takeUntil } from 'rxjs/operators';
 
 import { WINDOW } from './app.config';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'usacademy-root',
@@ -13,11 +14,11 @@ import { WINDOW } from './app.config';
 export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   destroy: Subject<null> = new Subject<null>();
 
-  @HostBinding('class.intro') showInto = true;
+  showInto = true;
 
   constructor(
     private router: Router,
-    @Inject(WINDOW) private window: Window
+    private viewportScroller: ViewportScroller
   ) { }
 
   ngOnInit() {
@@ -29,7 +30,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         switch (true) {
           case event instanceof NavigationEnd:
           case event instanceof NavigationCancel:
-            this.window.scrollTo(0, 0);
+            this.viewportScroller.scrollToPosition([0, 0]);
             break;
         }
       });

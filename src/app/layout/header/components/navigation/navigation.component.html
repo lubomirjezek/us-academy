@@ -1,5 +1,7 @@
 <ul class="navigation" [class.navigation--scrolled]="isScrolled">
   <li class="navigation__item" *ngFor="let link of links">
-    <a class="navigation__link" [href]="link.url">{{ link.name }}</a>
+    <a class="navigation__link" [routerLink]="['/']" [fragment]="link.url">
+      {{ link.name }}
+    </a>
   </li>
 </ul>

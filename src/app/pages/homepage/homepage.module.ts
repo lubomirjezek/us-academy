@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { InViewportModule } from 'ng-in-viewport';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { RouterModule } from '@angular/router';
 
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HomepageRoutingModule } from './homepage-routing.module';
@@ -11,22 +12,29 @@ import { MapComponent } from './components/map/map.component';
 import { PinComponent } from './components/pin/pin.component';
 import { featureName, reducer } from './reducers/homepage.reducer';
 import { HomepageEffects } from './effects/homepage.effects';
+import { CityComponent } from './components/city/city.component';
+import { ContainerModule } from '../../layout/container/container.module';
+import { ButtonModule } from '../../ui/button/button.module';
 
 @NgModule({
   declarations: [
     HomepageComponent,
     MapComponent,
-    PinComponent
+    PinComponent,
+    CityComponent
   ],
   imports: [
     CommonModule,
     HomepageRoutingModule,
     SlideModule,
     InViewportModule,
+    RouterModule,
     StoreModule.forFeature(featureName, reducer),
     EffectsModule.forFeature([
       HomepageEffects
-    ])
+    ]),
+    ContainerModule,
+    ButtonModule
   ]
 })
 export class HomepageModule { }

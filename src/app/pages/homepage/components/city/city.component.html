@@ -1,0 +1,61 @@
+<div id="terminy"></div>
+<div class="city" *ngIf="city">
+  <usacademy-container>
+<!--    <div class="table">
+      <div class="table__tr">
+        <div class="table__th">Cena</div>
+        <div class="table__th">Město</div>
+        <div class="table__th">Již přihlášených</div>
+        <div class="table__th">Datum konání</div>
+        <div class="table__th"></div>
+      </div>
+      <div class="table__tr" *ngFor="let camp of city?.camps">
+        <div class="table__td table__td&#45;&#45;price">
+          {{ camp.price }}
+        </div>
+        <div class="table__td table__td&#45;&#45;city">
+          {{ camp.city }}
+        </div>
+        <div class="table__td table__td&#45;&#45;signed">
+          {{ camp.signed }}/{{ camp.capacity }}
+        </div>
+        <div class="table__td table__td&#45;&#45;date">
+          {{ camp.date }}
+        </div>
+        <div class="table__td table__td&#45;&#45;actions">
+          <button ui-button="positive">detail</button>
+        </div>
+      </div>
+    </div>-->
+    <div class="table" [@fadeInStagger]="city?.workshops?.length">
+      <div class="table__tr">
+        <div class="table__th">Cena</div>
+        <div class="table__th">Město</div>
+        <div class="table__th">Již přihlášených</div>
+        <div class="table__th">Datum konání</div>
+        <div class="table__th">Čas konání</div>
+        <div class="table__th"></div>
+      </div>
+      <div class="table__tr" *ngFor="let camp of city?.workshops">
+        <div class="table__td table__td--price">
+          {{ camp.price }}
+        </div>
+        <div class="table__td table__td--city">
+          {{ camp.city }}
+        </div>
+        <div class="table__td table__td--signed">
+          {{ camp.signed }}/{{ camp.capacity }}
+        </div>
+        <div class="table__td table__td--date">
+          {{ camp.date }}
+        </div>
+        <div class="table__td table__td--time">
+          {{ camp.time }}
+        </div>
+        <div class="table__td table__td--actions">
+          <button ui-button="positive">detail</button>
+        </div>
+      </div>
+    </div>
+  </usacademy-container>
+</div>

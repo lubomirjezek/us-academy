@@ -1,0 +1,46 @@
+@import "../../../../../scss/variables";
+
+.city {
+  background-color: map-get($theme, background-alternative);
+  padding: 8rem 0;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table__tr {
+  display: flex;
+}
+
+.table__th,
+.table__td {
+  flex: 1;
+  text-align: left;
+  padding: 3rem;
+  font-weight: map-get($theme, font-weight-normal);
+  display: flex;
+  align-items: center;
+}
+
+.table__th {
+  font-size: 1.2rem;
+  border-bottom: 0.1rem solid map-get($theme, line-secondary);
+}
+
+.table__td {
+  font-size: 1.4rem;
+  font-weight: map-get($theme, font-weight-bold);
+}
+
+.table__td--price { }
+
+.table__td--city {
+  text-transform: uppercase;
+}
+
+.table__td--signed { }
+
+.table__td--date { }
+
+.table__td--time { }

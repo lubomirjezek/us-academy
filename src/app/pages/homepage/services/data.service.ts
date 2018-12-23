@@ -44,13 +44,96 @@ export class DataService extends BaseService {
     const cities = {
       'Tábor': {
         name: 'Tábor',
-        workshops: [],
-        camps: []
+        workshops: [
+          {
+            price: 1600,
+            city: 'Tábor',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }, {
+            price: 1600,
+            city: 'Tábor',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }
+        ],
+        camps: [
+          {
+            price: 1600,
+            city: 'Tábor',
+            signed: 30,
+            capacity: 30,
+            date: '05.01.2019'
+          }
+        ]
       },
       'Jindřichův Hradec': {
         name: 'Jindřichův Hradec',
-        workshops: [],
-        camps: []
+        workshops: [
+          {
+            price: 1600,
+            city: 'Jindřichův Hradec',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }, {
+            price: 1600,
+            city: 'Jindřichův Hradec',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }, {
+            price: 1600,
+            city: 'Jindřichův Hradec',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }, {
+            price: 1600,
+            city: 'Jindřichův Hradec',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }, {
+            price: 1600,
+            city: 'Jindřichův Hradec',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }, {
+            price: 1600,
+            city: 'Jindřichův Hradec',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }, {
+            price: 1600,
+            city: 'Jindřichův Hradec',
+            signed: 30,
+            capacity: 30,
+            date: '01.01.2019',
+            time: '19:00-20:00'
+          }
+        ],
+        camps: [
+          {
+            price: 1600,
+            city: 'Jindřichův Hradec',
+            signed: 30,
+            capacity: 30,
+            date: '05.01.2019'
+          }
+        ]
       },
       'Třešť': {
         name: 'Třešť',

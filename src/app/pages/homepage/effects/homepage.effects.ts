@@ -44,6 +44,12 @@ export class HomepageEffects {
   getCity: Observable<Action> = this.actions
     .pipe(
       ofType(GET_CITY),
+      tap(() => {
+        this.router.navigate(['/'], {
+          fragment: 'terminy'
+        });
+      }),
+      delay(1000),
       switchMap((action: GetCity) => {
         return this.dataService
           .getCity(action.payload.id)

@@ -90,4 +90,6 @@ export function reducer(state = initialState, action: All) {
 export const featureSelector = createFeatureSelector<State>(featureName);
 
 export const selectPins = createSelector(featureSelector, state => state.pins.data);
+
 export const selectCity = createSelector(featureSelector, state => state.city.data);
+export const selectCityStoreData = createSelector(featureSelector, state => state.city);

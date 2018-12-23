@@ -1,8 +1,9 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
 import { City } from '../../../../models/city';
 import { fadeInStagger } from '../../../../animations/fade-in-stagger.animation';
-import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+import { StoreData } from '../../../../models/store-data';
 
 @Component({
   selector: 'usacademy-city',
@@ -21,16 +22,12 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
     ])
   ]
 })
-export class CityComponent implements OnInit, OnChanges {
+export class CityComponent implements OnInit {
 
-  @Input() city: City;
+  @Input() city: StoreData<City>;
 
   constructor() { }
 
   ngOnInit() { }
-
-  ngOnChanges() {
-    // console.log(this.city);
-  }
 
 }

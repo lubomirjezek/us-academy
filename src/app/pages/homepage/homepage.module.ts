@@ -16,6 +16,7 @@ import { CityComponent } from './components/city/city.component';
 import { ContainerModule } from '../../layout/container/container.module';
 import { ButtonModule } from '../../ui/button/button.module';
 import { ContactComponent } from './components/contact/contact.component';
+import { GreyboxModule } from '../../ui/greybox/greybox.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ContactComponent } from './components/contact/contact.component';
       HomepageEffects
     ]),
     ContainerModule,
-    ButtonModule
+    ButtonModule,
+    GreyboxModule
   ]
 })
 export class HomepageModule { }

@@ -1,0 +1,7 @@
+@mixin greybox-theme($theme) {
+  $background-greybox:  map-get($theme, background-greybox);
+
+  .ui-greybox {
+    background-color: $background-greybox;
+  }
+}

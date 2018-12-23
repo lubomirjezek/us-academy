@@ -10,10 +10,10 @@ import { Link } from '../../../../models/link';
 export class LogoComponent implements OnInit {
 
   @Input() link: Link;
+  @Input() isScrolled: boolean;
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

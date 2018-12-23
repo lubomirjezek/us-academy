@@ -1,16 +1,16 @@
 @import "../../../../../scss/variables";
 
-:host {
-  display: inline-flex;
-  justify-content: center;
+.logo {
+  display: flex;
+  height: 8rem;
+  width: 8rem;
   align-items: center;
-  height: 100%;
-  flex: 0 0 auto;
+  justify-content: center;
 }
 
-.logo {
-  display: inline-block;
-  height: 100%;
+.logo--scrolled {
+  height: 6.2rem;
+  width: 6.2rem;
 }
 
 .logo__img {

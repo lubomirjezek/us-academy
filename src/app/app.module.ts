@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IntroModule } from './layout/intro/intro.module';
 import { API_URL, DOCUMENT, WINDOW } from './app.config';
+import { FooterModule } from './layout/footer/footer.module';
+import { HeaderModule } from './layout/header/header.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { API_URL, DOCUMENT, WINDOW } from './app.config';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument(),
-    HttpClientModule
+    HttpClientModule,
+    HeaderModule,
+    FooterModule
   ],
   providers: [
     { provide: WINDOW, useValue: window },

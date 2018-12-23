@@ -12,6 +12,7 @@ import { PinComponent } from './components/pin/pin.component';
 import { featureName, reducer } from './reducers/homepage.reducer';
 import { HomepageEffects } from './effects/homepage.effects';
 import { HeaderModule } from '../../layout/header/header.module';
+import { FooterModule } from '../../layout/footer/footer.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HeaderModule } from '../../layout/header/header.module';
     StoreModule.forFeature(featureName, reducer),
     EffectsModule.forFeature([
       HomepageEffects
-    ])
+    ]),
+    FooterModule
   ]
 })
 export class HomepageModule { }

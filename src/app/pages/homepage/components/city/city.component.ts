@@ -26,6 +26,8 @@ export class CityComponent implements OnInit {
 
   @Input() city: StoreData<City>;
 
+  activeSection = 0;
+
   constructor() { }
 
   ngOnInit() { }

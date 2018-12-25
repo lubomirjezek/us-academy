@@ -1,5 +1,16 @@
 <div class="city" *ngIf="city?.loaded">
   <usacademy-container>
+    <button (click)="activeSection = 0" [ui-button]="activeSection === 0 ? 'negative' : 'positive'">
+      Kroužky
+    </button>
+    <button (click)="activeSection = 1" [ui-button]="activeSection === 1 ? 'negative' : 'positive'">
+      Workshopy
+    </button>
+    <button (click)="activeSection = 2" [ui-button]="activeSection === 2 ? 'negative' : 'positive'">
+      Příměstské tábory
+    </button>
+  </usacademy-container>
+  <usacademy-container *ngIf="activeSection === 0">
     <div class="table" [@fadeInStagger]="city?.data?.trainings?.length">
       <div class="table__tr">
         <div class="table__th">Město</div>
@@ -31,7 +42,7 @@
       </div>
     </div>
   </usacademy-container>
-  <usacademy-container>
+  <usacademy-container *ngIf="activeSection === 1">
     <div class="table" [@fadeInStagger]="city?.data?.workshops?.length">
       <div class="table__tr">
         <div class="table__th">Město</div>
@@ -63,7 +74,7 @@
       </div>
     </div>
   </usacademy-container>
-  <usacademy-container>
+  <usacademy-container *ngIf="activeSection === 2">
     <div class="table" [@fadeInStagger]="city?.data?.camps?.length">
       <div class="table__tr">
         <div class="table__th">Město</div>

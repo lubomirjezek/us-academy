@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
+import { ScrollToService } from 'ng2-scroll-to-el';
 
 import { City } from '../../../../models/city';
 import { fadeInStagger } from '../../../../animations/fade-in-stagger.animation';
@@ -28,8 +29,16 @@ export class CityComponent implements OnInit {
 
   activeSection = 0;
 
-  constructor() { }
+  constructor(
+    private scrollService: ScrollToService
+  ) { }
 
   ngOnInit() { }
+
+  selectActiveSection(id: number): void {
+    this.activeSection = id;
+
+    this.scrollService.scrollTo('#terminy', 300, -90);
+  }
 
 }

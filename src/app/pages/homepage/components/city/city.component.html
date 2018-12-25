@@ -1,12 +1,12 @@
 <div class="city" *ngIf="city?.loaded">
   <usacademy-container>
-    <button (click)="activeSection = 0" [ui-button]="activeSection === 0 ? 'negative' : 'positive'">
+    <button (click)="selectActiveSection(0)" [ui-button]="activeSection === 0 ? 'negative' : 'positive'">
       Kroužky
     </button>
-    <button (click)="activeSection = 1" [ui-button]="activeSection === 1 ? 'negative' : 'positive'">
+    <button (click)="selectActiveSection(1)" [ui-button]="activeSection === 1 ? 'negative' : 'positive'">
       Workshopy
     </button>
-    <button (click)="activeSection = 2" [ui-button]="activeSection === 2 ? 'negative' : 'positive'">
+    <button (click)="selectActiveSection(2)" [ui-button]="activeSection === 2 ? 'negative' : 'positive'">
       Příměstské tábory
     </button>
   </usacademy-container>
@@ -20,24 +20,24 @@
         <div class="table__th">Cena</div>
         <div class="table__th"></div>
       </div>
-      <div class="table__tr" *ngFor="let camp of city?.data?.trainings">
+      <div class="table__tr" *ngFor="let training of city?.data?.trainings">
         <div class="table__td table__td--city">
           {{ city.data.parent.name }}
         </div>
         <div class="table__td table__td--date">
-          {{ camp.day }}
+          {{ training.day }}
         </div>
         <div class="table__td table__td--time">
-          {{ camp.time }}
+          {{ training.time }}
         </div>
         <div class="table__td table__td--signed">
-          {{ camp.paid }}/{{ camp.capacity }}
+          {{ training.paid }}/{{ training.capacity }}
         </div>
         <div class="table__td table__td--price">
-          {{ camp.price }},-
+          {{ training.price }},-
         </div>
         <div class="table__td table__td--actions">
-          <button ui-button="positive">detail</button>
+          <a [routerLink]="['/', city.data.parent.id, training.id]" ui-button="positive">detail</a>
         </div>
       </div>
     </div>
@@ -52,24 +52,24 @@
         <div class="table__th">Cena</div>
         <div class="table__th"></div>
       </div>
-      <div class="table__tr" *ngFor="let camp of city?.data?.workshops">
+      <div class="table__tr" *ngFor="let workshop of city?.data?.workshops">
         <div class="table__td table__td--city">
           {{ city.data.parent.name }}
         </div>
         <div class="table__td table__td--date">
-          {{ camp.date }}
+          {{ workshop.date }}
         </div>
         <div class="table__td table__td--time">
-          {{ camp.time }}
+          {{ workshop.time }}
         </div>
         <div class="table__td table__td--signed">
-          {{ camp.paid }}/{{ camp.capacity }}
+          {{ workshop.paid }}/{{ workshop.capacity }}
         </div>
         <div class="table__td table__td--price">
-          {{ camp.price }},-
+          {{ workshop.price }},-
         </div>
         <div class="table__td table__td--actions">
-          <button ui-button="positive">detail</button>
+          <a [routerLink]="['/', city.data.parent.id, workshop.id]" ui-button="positive">detail</a>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@
           {{ camp.price }},-
         </div>
         <div class="table__td table__td--actions">
-          <button ui-button="positive">detail</button>
+          <a [routerLink]="['/', city.data.parent.id, camp.id]" ui-button="positive">detail</a>
         </div>
       </div>
     </div>

@@ -8,10 +8,10 @@ const routes: Routes = [
   }, {
     path: 'gdpr',
     loadChildren: './pages/gdpr/gdpr.module#GdprModule'
-  }/*, {
-    path: 'detail',
+  }, {
+    path: ':city',
     loadChildren: './pages/detail/detail.module#DetailModule'
-  }*/
+  }
 ];
 
 @NgModule({

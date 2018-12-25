@@ -19,7 +19,7 @@ export class MapComponent implements OnInit {
 
   ngOnInit() { }
 
-  selectCity(id: string): void {
+  selectCity(id: number): void {
     this.store.dispatch(new GetCity({
       id: id
     }));

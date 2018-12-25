@@ -12,6 +12,8 @@ import { IntroModule } from './layout/intro/intro.module';
 import { API_URL, DOCUMENT, WINDOW } from './app.config';
 import { FooterModule } from './layout/footer/footer.module';
 import { HeaderModule } from './layout/header/header.module';
+import { environment } from '../environments/environment';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,13 @@ import { HeaderModule } from './layout/header/header.module';
     StoreDevtoolsModule.instrument(),
     HttpClientModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    ScrollToModule.forRoot()
   ],
   providers: [
     { provide: WINDOW, useValue: window },
     { provide: DOCUMENT, useValue: document },
-    { provide: API_URL, useValue: '' }
+    { provide: API_URL, useValue: environment.api }
   ],
   bootstrap: [
     AppComponent

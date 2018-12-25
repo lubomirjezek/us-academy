@@ -1,4 +1,4 @@
-export interface Camp {
+export interface Training {
   id: number;
   address: string;
   capacity: number;

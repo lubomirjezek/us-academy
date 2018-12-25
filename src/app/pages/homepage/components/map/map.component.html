@@ -1,10 +1,9 @@
-<div id="vyber-mest"></div>
 <div class="map">
   <h1>Výběr měst</h1>
   <div class="map__container">
     <img class="map__img" src="assets/map.png" alt="Česká republika">
 
     <usacademy-pin
-      class="map__pin" *ngFor="let pin of pins" [x]="pin.x" [y]="pin.y" (click)="selectCity(pin.name)"></usacademy-pin>
+      class="map__pin" *ngFor="let pin of pins" [x]="pin.x" [y]="pin.y" (click)="selectCity(pin.id)"></usacademy-pin>
   </div>
 </div>

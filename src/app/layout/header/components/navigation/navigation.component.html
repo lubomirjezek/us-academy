@@ -1,6 +1,6 @@
 <ul class="navigation" [class.navigation--scrolled]="isScrolled">
   <li class="navigation__item" *ngFor="let link of links">
-    <a class="navigation__link" [routerLink]="['/']" [fragment]="link.url">
+    <a class="navigation__link" [scrollTo]="'#' + link.url" [scrollDuration]="300" [scrollOffset]="-90">
       {{ link.name }}
     </a>
   </li>

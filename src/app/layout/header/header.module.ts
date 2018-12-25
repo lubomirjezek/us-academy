@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
@@ -24,7 +25,8 @@ import { featureName, reducer } from './reducers/header.reducer';
     CommonModule,
     RouterModule,
     IconModule,
-    StoreModule.forFeature(featureName, reducer)
+    StoreModule.forFeature(featureName, reducer),
+    ScrollToModule
   ]
 })
 export class HeaderModule { }

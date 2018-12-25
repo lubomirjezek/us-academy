@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Observable, of } from 'rxjs';
 import { Action } from '@ngrx/store';
-import { catchError, delay, map, switchMap, tap } from 'rxjs/operators';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 import { DataService } from '../services/data.service';
 import {
-  GET_CITY, GET_CITY_SUCCESS,
+  GET_CITY,
   GET_PINS,
   GetCity,
   GetCityError,
@@ -16,6 +16,7 @@ import {
   GetPinsError,
   GetPinsSuccess
 } from '../actions/homepage.actions';
+import { ScrollToService } from 'ng2-scroll-to-el';
 
 @Injectable()
 export class HomepageEffects {
@@ -23,7 +24,8 @@ export class HomepageEffects {
   constructor(
     private actions: Actions,
     private dataService: DataService,
-    private router: Router
+    private router: Router,
+    private scrollService: ScrollToService
   ) { }
 
   @Effect()
@@ -45,11 +47,8 @@ export class HomepageEffects {
     .pipe(
       ofType(GET_CITY),
       tap(() => {
-        this.router.navigate(['/'], {
-          fragment: 'terminy'
-        });
+        this.scrollService.scrollTo('#terminy', 300, -90);
       }),
-      delay(1000),
       switchMap((action: GetCity) => {
         return this.dataService
           .getCity(action.payload.id)
@@ -59,17 +58,4 @@ export class HomepageEffects {
           );
       }),
     );
-
-  @Effect({ dispatch: false })
-  getCitySuccess: Observable<Action> = this.actions
-    .pipe(
-      ofType(GET_CITY_SUCCESS),
-      delay(200),
-      tap(() => {
-        this.router.navigate(['/'], {
-          fragment: 'terminy'
-        });
-      })
-    );
-
 }

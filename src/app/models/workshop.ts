@@ -1,5 +1,5 @@
 export interface Workshop {
-  id: number;
+  id: string;
   address: string;
   capacity: number;
   date: string;

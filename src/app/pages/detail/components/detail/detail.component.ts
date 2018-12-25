@@ -29,7 +29,7 @@ export class DetailComponent implements OnInit, OnDestroy {
       .pipe(
         takeUntil(this.destroy)
       )
-      .subscribe((params: { [key: string]: number }) => {
+      .subscribe((params: { [key: string]: string }) => {
         this.fetchDetail(params.id);
       });
 
@@ -43,7 +43,7 @@ export class DetailComponent implements OnInit, OnDestroy {
     this.destroy.next();
   }
 
-  fetchDetail(id: number): void {
+  fetchDetail(id: string): void {
     this.store.dispatch(new GetDetail({
       id: id
     }));

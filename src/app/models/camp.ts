@@ -1,5 +1,5 @@
 export interface Camp {
-  id: number;
+  id: string;
   address: string;
   capacity: number;
   date: string;

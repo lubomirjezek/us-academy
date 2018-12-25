@@ -11,7 +11,7 @@ import { Camp } from '../../../models/camp';
 })
 export class DataService extends BaseService {
 
-  getDetail(id: number): Observable<Training | Workshop | Camp> {
+  getDetail(id: string): Observable<Training | Workshop | Camp> {
     return of(null);
   }
 

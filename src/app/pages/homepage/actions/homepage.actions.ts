@@ -32,7 +32,7 @@ export class GetPinsError implements Action {
 export class GetCity implements Action {
   readonly type = GET_CITY;
 
-  constructor(public payload: { id: number }) { }
+  constructor(public payload: { id: string }) { }
 }
 
 export class GetCitySuccess implements Action {

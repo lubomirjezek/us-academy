@@ -11,7 +11,7 @@ export const GET_DETAIL_ERROR   = '[Detail] GET detail error';
 export class GetDetail implements Action {
   readonly type = GET_DETAIL;
 
-  constructor(public payload: { id: number }) { }
+  constructor(public payload: { id: string }) { }
 }
 
 export class GetDetailSuccess implements Action {

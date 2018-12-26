@@ -1,5 +1,5 @@
 export interface Pin {
-  id: number;
+  id: string;
   name: string;
   x: number;
   y: number;

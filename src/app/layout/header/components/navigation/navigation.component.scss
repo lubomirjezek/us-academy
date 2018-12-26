@@ -29,5 +29,9 @@
   .navigation__link {
     font-size: 1.8rem;
     color: map-get($theme, text-primary);
+
+    &:hover {
+      color: map-get($theme, color-primary);
+    }
   }
 }

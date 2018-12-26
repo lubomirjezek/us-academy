@@ -3,13 +3,22 @@
   <div class="map__container">
     <img class="map__img" src="assets/map.png" alt="Česká republika">
 
-    <usacademy-pin
-      class="map__pin"
-      *ngFor="let pin of pins"
-      [x]="pin.x"
-      [y]="pin.y"
-      [name]="pin.name"
-      (click)="selectCity(pin.id)"
-    ></usacademy-pin>
+    <ng-container *ngFor="let pin of pins">
+      <usacademy-pin
+        class="map__pin"
+        [x]="pin.x"
+        [y]="pin.y"
+        [name]="pin.name"
+        (click)="selectCity(pin.id)"
+        [uiTooltip]="template"
+      ></usacademy-pin>
+      <ng-template #template>
+        <div class="map__tooltip">
+          {{ pin.name }}
+        </div>
+      </ng-template>
+    </ng-container>
   </div>
 </div>
+
+

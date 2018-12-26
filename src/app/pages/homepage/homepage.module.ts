@@ -17,6 +17,7 @@ import { ContainerModule } from '../../layout/container/container.module';
 import { ButtonModule } from '../../ui/button/button.module';
 import { ContactComponent } from './components/contact/contact.component';
 import { GreyboxModule } from '../../ui/greybox/greybox.module';
+import { TooltipModule } from '../../ui/tooltip/tooltip.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { GreyboxModule } from '../../ui/greybox/greybox.module';
     ]),
     ContainerModule,
     ButtonModule,
-    GreyboxModule
+    GreyboxModule,
+    TooltipModule
   ]
 })
 export class HomepageModule { }

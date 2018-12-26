@@ -21,3 +21,14 @@
 .map__pin {
   cursor: pointer;
 }
+
+.map__tooltip{
+  border: 0.2rem solid map-get($theme, color-primary);
+  padding: 0.5rem 1.5rem 0.4rem 1.5rem;
+  background-color: map-get($theme, background-primary);
+  text-transform: uppercase;
+  color: map-get($theme, color-primary);
+  font-size: 1.4rem;
+  font-family: map-get($theme, font-secondary);
+  font-weight: map-get($theme, font-weight-bold);
+}

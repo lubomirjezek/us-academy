@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { BaseService } from '../../../models/base.service';
 import { Training } from '../../../models/training';
@@ -12,7 +13,13 @@ import { Camp } from '../../../models/camp';
 export class DataService extends BaseService {
 
   getDetail(id: string): Observable<Training | Workshop | Camp> {
-    return of(null);
+    const endpoint = this.buildUrl(['trainings', id]);
+
+    return this.http
+      .get<{ item: Training | Workshop | Camp }>(endpoint)
+      .pipe(
+        map(value => value.item)
+      );
   }
 
 }

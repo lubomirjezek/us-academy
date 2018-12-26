@@ -1,0 +1,55 @@
+@import "../../../../../scss/variables";
+
+.info { }
+
+.info__bar {
+  background-color: rgba(13, 108, 180, .7);
+  height: 14rem;
+  display: flex;
+  justify-content: center;
+}
+
+.info__city {
+  text-align: left;
+  color: map-get($theme, text-secondary);
+  margin: 0;
+}
+
+.info__type {
+  text-align: left;
+  color: map-get($theme, text-secondary);
+  margin: 0 0 8rem 0;
+  font-weight: map-get($theme, font-weight-normal);
+}
+
+.info__row {
+  display: flex;
+  max-width: 120rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.info__col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:first-child {
+    justify-content: flex-start;
+  }
+
+  &:last-child {
+    justify-content: flex-end;
+  }
+}
+
+.info__price,
+.info__signed {
+  font-size: 4rem;
+  font-family: map-get($theme, font-secondary);
+  color: map-get($theme, text-secondary);
+  font-weight: map-get($theme, font-weight-bold);
+  letter-spacing: .5rem;
+}
+

@@ -18,7 +18,7 @@ export const initialState: State = {
   }
 };
 
-export const featureName = 'homepage';
+export const featureName = 'detail';
 
 export function reducer(state = initialState, action: All) {
   switch (action.type) {

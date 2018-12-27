@@ -15,7 +15,7 @@ import { GetDetail } from '../../actions/detail.actions';
 })
 export class DetailComponent implements OnInit, OnDestroy {
   destroy: Subject<null> = new Subject<null>();
-  detail: Observable<Training>;
+  training: Observable<Training>;
 
   constructor(
     private store: Store<any>,
@@ -31,7 +31,7 @@ export class DetailComponent implements OnInit, OnDestroy {
         this.fetchDetail(params.id);
       });
 
-    this.detail = this.store
+    this.training = this.store
       .pipe(
         select(selectDetail)
       );

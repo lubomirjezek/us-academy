@@ -1,7 +1,7 @@
 <usacademy-slide class="slide">
-  <usacademy-info class="info" [detail]="detail | async"></usacademy-info>
+  <usacademy-info class="info" [training]="training | async"></usacademy-info>
 </usacademy-slide>
 
 <usacademy-container>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <usacademy-content [training]="training | async"></usacademy-content>
 </usacademy-container>

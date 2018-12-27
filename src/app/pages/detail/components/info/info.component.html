@@ -1,19 +1,19 @@
 <div class="info">
   <usacademy-container>
-    <h1 class="info__city">{{ detail?.city?.name }}</h1>
-    <h2 class="info__type">{{ detail?.type | trainingTypeToString }}</h2>
+    <h1 class="info__city">{{ training?.city?.name }}</h1>
+    <h2 class="info__type">{{ training?.type | trainingTypeToString }}</h2>
   </usacademy-container>
 
   <div class="info__bar">
     <ui-row class="info__container">
       <ui-col vertical-center>
-        <span class="info__price">{{ detail?.price }},-</span>
+        <span class="info__price">{{ training?.price }},-</span>
       </ui-col>
       <ui-col vertical-center horizontal-center>
-        <span class="info__signed">{{ detail?.paid }}/{{ detail?.capacity }}</span>
+        <span class="info__signed">{{ training?.paid }}/{{ training?.capacity }}</span>
       </ui-col>
       <ui-col vertical-center horizontal-right>
-        <button ui-button="positive" [disabled]="detail?.paid >= detail?.capacity">
+        <button ui-button="positive" [disabled]="training?.paid >= training?.capacity">
           Rezervovat si místo
         </button>
       </ui-col>

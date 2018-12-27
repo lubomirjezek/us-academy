@@ -1,0 +1,85 @@
+<div class="content">
+  <ui-row *ngIf="training?.text">
+    <ui-col>
+      {{ training?.text }}
+    </ui-col>
+  </ui-row>
+
+  <ng-container [ngSwitch]="training?.type">
+    <ng-container *ngSwitchCase="0">
+      <ui-row>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Den</ui-dt>
+            <ui-dd>{{ training?.day }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Čas konání</ui-dt>
+            <ui-dd>{{ training?.time }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+      </ui-row>
+      <ui-row>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Trenér</ui-dt>
+            <ui-dd>{{ training?.trainer }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Adresa</ui-dt>
+            <ui-dd>{{ training?.address }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+      </ui-row>
+    </ng-container>
+    <ng-container *ngSwitchCase="1">
+      <ui-row>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Datum konání</ui-dt>
+            <ui-dd>{{ training?.date }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Čas konání</ui-dt>
+            <ui-dd>{{ training?.time }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+      </ui-row>
+      <ui-row>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Adresa</ui-dt>
+            <ui-dd>{{ training?.address }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+        <ui-col></ui-col>
+      </ui-row>
+    </ng-container>
+    <ng-container *ngSwitchCase="2">
+      <ui-row>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Datum konání</ui-dt>
+            <ui-dd>{{ training?.date }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+        <ui-col></ui-col>
+      </ui-row>
+      <ui-row>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Adresa</ui-dt>
+            <ui-dd>{{ training?.address }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+        <ui-col></ui-col>
+      </ui-row>
+    </ng-container>
+  </ng-container>
+</div>

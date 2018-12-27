@@ -13,11 +13,14 @@ import { InfoComponent } from './components/info/info.component';
 import { ButtonModule } from '../../ui/button/button.module';
 import { PipesModule } from '../../modules/pipes/pipes.module';
 import { GridModule } from '../../ui/grid/grid.module';
+import { ContentComponent } from './components/content/content.component';
+import { ListModule } from '../../ui/list/list.module';
 
 @NgModule({
   declarations: [
     DetailComponent,
-    InfoComponent
+    InfoComponent,
+    ContentComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +33,8 @@ import { GridModule } from '../../ui/grid/grid.module';
     ]),
     ButtonModule,
     PipesModule,
-    GridModule
+    GridModule,
+    ListModule
   ]
 })
 export class DetailModule { }

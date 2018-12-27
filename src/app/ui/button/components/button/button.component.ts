@@ -30,6 +30,14 @@ export class ButtonComponent implements OnInit, OnChanges {
 
   @Input() color: string;
 
+  @Input() set disabled(value: boolean) {
+    if (value) {
+      this.renderer.addClass(this.elRef.nativeElement, `ui-button--disabled`);
+    } else {
+      this.renderer.removeClass(this.elRef.nativeElement, `ui-button--disabled`);
+    }
+  }
+
   constructor(
     private elRef: ElementRef,
     private renderer: Renderer2

@@ -2,12 +2,10 @@ import { createFeatureSelector, createSelector } from '@ngrx/store';
 
 import { StoreData } from '../../../models/store-data';
 import { Training } from '../../../models/training';
-import { Workshop } from '../../../models/workshop';
-import { Camp } from '../../../models/camp';
 import { All, GET_DETAIL, GET_DETAIL_ERROR, GET_DETAIL_SUCCESS } from '../actions/detail.actions';
 
 export interface State {
-  detail: StoreData<Training | Workshop | Camp>;
+  detail: StoreData<Training>;
 }
 
 export const initialState: State = {

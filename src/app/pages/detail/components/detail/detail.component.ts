@@ -5,8 +5,6 @@ import { Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 import { Training } from '../../../../models/training';
-import { Workshop } from '../../../../models/workshop';
-import { Camp } from '../../../../models/camp';
 import { selectDetail } from '../../reducers/detail.reducer';
 import { GetDetail } from '../../actions/detail.actions';
 
@@ -17,7 +15,7 @@ import { GetDetail } from '../../actions/detail.actions';
 })
 export class DetailComponent implements OnInit, OnDestroy {
   destroy: Subject<null> = new Subject<null>();
-  detail: Observable<Training | Workshop | Camp>;
+  detail: Observable<Training>;
 
   constructor(
     private store: Store<any>,

@@ -11,6 +11,7 @@ import { featureName, reducer } from './reducers/detail.reducer';
 import { DetailEffects } from './effects/detail.effects';
 import { InfoComponent } from './components/info/info.component';
 import { ButtonModule } from '../../ui/button/button.module';
+import { PipesModule } from '../../modules/pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ButtonModule } from '../../ui/button/button.module';
     EffectsModule.forFeature([
       DetailEffects
     ]),
-    ButtonModule
+    ButtonModule,
+    PipesModule
   ]
 })
 export class DetailModule { }

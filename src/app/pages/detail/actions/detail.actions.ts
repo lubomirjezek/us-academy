@@ -1,8 +1,6 @@
 import { Action } from '@ngrx/store';
 
 import { Training } from '../../../models/training';
-import { Workshop } from '../../../models/workshop';
-import { Camp } from '../../../models/camp';
 
 export const GET_DETAIL         = '[Detail] GET detail';
 export const GET_DETAIL_SUCCESS = '[Detail] GET detail success';
@@ -17,7 +15,7 @@ export class GetDetail implements Action {
 export class GetDetailSuccess implements Action {
   readonly type = GET_DETAIL_SUCCESS;
 
-  constructor(public payload: Training | Workshop | Camp) { }
+  constructor(public payload: Training) { }
 }
 
 export class GetDetailError implements Action {

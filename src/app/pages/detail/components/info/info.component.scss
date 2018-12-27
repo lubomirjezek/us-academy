@@ -4,7 +4,7 @@
 
 .info__bar {
   background-color: rgba(13, 108, 180, .7);
-  height: 14rem;
+  height: 10rem;
   display: flex;
   justify-content: center;
 }
@@ -18,7 +18,7 @@
 .info__type {
   text-align: left;
   color: map-get($theme, text-secondary);
-  margin: 0 0 8rem 0;
+  margin: 0 0 6rem 0;
   font-weight: map-get($theme, font-weight-normal);
 }
 

@@ -1,3 +1,5 @@
+import { Pin } from './pin';
+
 export interface Training {
   id: string;
   address: string;
@@ -12,4 +14,5 @@ export interface Training {
   time: string;
   trainer: string;
   type: number;
+  city: Pin;
 }

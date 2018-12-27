@@ -1,0 +1,50 @@
+.ui-col {
+  display: block;
+  flex: 1 1 0;
+  margin-right: 20px;
+  min-width: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@for $i from 2 through 10 {
+  .ui-col[flex-#{$i}] {
+    flex: $i $i 0;
+  }
+}
+
+.ui-col[flex-auto] {
+  flex: 0 0 auto;
+}
+
+.ui-col[vertical-top] {
+  display: flex;
+  align-items: flex-start;
+}
+
+.ui-col[vertical-center] {
+  display: flex;
+  align-items: center;
+}
+
+.ui-col[vertical-bottom] {
+  display: flex;
+  align-items: flex-end;
+}
+
+.ui-col[horizontal-left] {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ui-col[horizontal-center] {
+  display: flex;
+  justify-content: center;
+}
+
+.ui-col[horizontal-right] {
+  display: flex;
+  justify-content: flex-end;
+}

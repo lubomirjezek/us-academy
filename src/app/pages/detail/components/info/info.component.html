@@ -5,18 +5,18 @@
   </usacademy-container>
 
   <div class="info__bar">
-    <div class="info__row">
-      <div class="info__col">
+    <ui-row class="info__container">
+      <ui-col vertical-center>
         <span class="info__price">{{ detail?.price }},-</span>
-      </div>
-      <div class="info__col">
+      </ui-col>
+      <ui-col vertical-center horizontal-center>
         <span class="info__signed">{{ detail?.paid }}/{{ detail?.capacity }}</span>
-      </div>
-      <div class="info__col">
+      </ui-col>
+      <ui-col vertical-center horizontal-right>
         <button ui-button="positive" [disabled]="detail?.paid >= detail?.capacity">
           Rezervovat si místo
         </button>
-      </div>
-    </div>
+      </ui-col>
+    </ui-row>
   </div>
 </div>

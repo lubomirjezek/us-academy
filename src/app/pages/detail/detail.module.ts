@@ -12,6 +12,7 @@ import { DetailEffects } from './effects/detail.effects';
 import { InfoComponent } from './components/info/info.component';
 import { ButtonModule } from '../../ui/button/button.module';
 import { PipesModule } from '../../modules/pipes/pipes.module';
+import { GridModule } from '../../ui/grid/grid.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PipesModule } from '../../modules/pipes/pipes.module';
       DetailEffects
     ]),
     ButtonModule,
-    PipesModule
+    PipesModule,
+    GridModule
   ]
 })
 export class DetailModule { }

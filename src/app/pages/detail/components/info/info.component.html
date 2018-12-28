@@ -13,8 +13,8 @@
         <span class="info__signed">{{ training?.paid }}/{{ training?.capacity }}</span>
       </ui-col>
       <ui-col vertical-center horizontal-right>
-        <button ui-button="positive" [disabled]="training?.paid >= training?.capacity">
-          Rezervovat si místo
+        <button ui-button="positive">
+          {{ training?.paid >= training?.capacity ? 'Přihlásit náhradníka' : 'Rezervovat si místo' }}
         </button>
       </ui-col>
     </ui-row>

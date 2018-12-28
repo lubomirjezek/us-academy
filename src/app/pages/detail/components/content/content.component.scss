@@ -1,3 +1,30 @@
+@import "../../../../../scss/variables";
+
 .content {
   margin-top: 8rem;
+}
+
+.address { }
+
+.address__row {
+  font-weight: map-get($theme, font-weight-normal);
+  margin-bottom: .3rem;
+}
+
+.address__row--name {
+  font-weight: map-get($theme, font-weight-bold);
+}
+
+.address__row--position {
+  font-size: 1.4rem;
+  color: map-get($theme, text-alternative);
+}
+
+.address__link {
+  color: map-get($theme, color-primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

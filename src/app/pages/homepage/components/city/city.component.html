@@ -15,15 +15,19 @@
       <div class="table" [@fadeInStagger]="city?.data?.trainings?.length">
         <div class="table__tr">
           <div class="table__th">Město</div>
-          <div class="table__th">Den</div>
-          <div class="table__th">Čas konání</div>
-          <div class="table__th">Již přihlášených</div>
+          <div class="table__th">Období</div>
+          <div class="table__th">Den kroužků</div>
+          <div class="table__th">Čas</div>
+          <div class="table__th">Obsazenost</div>
           <div class="table__th">Cena</div>
           <div class="table__th"></div>
         </div>
         <div class="table__tr" *ngFor="let training of city?.data?.trainings">
           <div class="table__td table__td--city">
             {{ city.data.parent.name }}
+          </div>
+          <div class="table__td table__td--date">
+            {{ training.season }}
           </div>
           <div class="table__td table__td--date">
             {{ training.day }}
@@ -47,9 +51,9 @@
       <div class="table" [@fadeInStagger]="city?.data?.workshops?.length">
         <div class="table__tr">
           <div class="table__th">Město</div>
-          <div class="table__th">Datum konání</div>
-          <div class="table__th">Čas konání</div>
-          <div class="table__th">Již přihlášených</div>
+          <div class="table__th">Termín</div>
+          <div class="table__th">Čas</div>
+          <div class="table__th">Obsazenost</div>
           <div class="table__th">Cena</div>
           <div class="table__th"></div>
         </div>
@@ -79,8 +83,8 @@
       <div class="table" [@fadeInStagger]="city?.data?.camps?.length">
         <div class="table__tr">
           <div class="table__th">Město</div>
-          <div class="table__th">Datum konání</div>
-          <div class="table__th">Již přihlášených</div>
+          <div class="table__th">Termín</div>
+          <div class="table__th">Obsazenost</div>
           <div class="table__th">Cena</div>
           <div class="table__th"></div>
         </div>

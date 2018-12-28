@@ -6,26 +6,27 @@
   </ui-row>
 
   <ng-container [ngSwitch]="training?.type">
+
     <ng-container *ngSwitchCase="0">
       <ui-row>
         <ui-col>
           <ui-dl>
-            <ui-dt>Den</ui-dt>
-            <ui-dd>{{ training?.day }}</ui-dd>
+            <ui-dt>Období</ui-dt>
+            <ui-dd>{{ training?.season }}</ui-dd>
           </ui-dl>
         </ui-col>
         <ui-col>
           <ui-dl>
-            <ui-dt>Čas konání</ui-dt>
-            <ui-dd>{{ training?.time }}</ui-dd>
+            <ui-dt>Den kroužků</ui-dt>
+            <ui-dd>{{ training?.day }}</ui-dd>
           </ui-dl>
         </ui-col>
       </ui-row>
       <ui-row>
         <ui-col>
           <ui-dl>
-            <ui-dt>Trenér</ui-dt>
-            <ui-dd>{{ training?.trainer }}</ui-dd>
+            <ui-dt>Čas</ui-dt>
+            <ui-dd>{{ training?.time }}</ui-dd>
           </ui-dl>
         </ui-col>
         <ui-col>
@@ -35,18 +36,29 @@
           </ui-dl>
         </ui-col>
       </ui-row>
+      <ui-row>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Trenéři</ui-dt>
+            <ui-dd>{{ training?.trainer }}</ui-dd>
+          </ui-dl>
+        </ui-col>
+        <ui-col></ui-col>
+      </ui-row>
+      <ng-container [ngTemplateOutlet]="contact"></ng-container>
     </ng-container>
+
     <ng-container *ngSwitchCase="1">
       <ui-row>
         <ui-col>
           <ui-dl>
-            <ui-dt>Datum konání</ui-dt>
+            <ui-dt>Termín</ui-dt>
             <ui-dd>{{ training?.date }}</ui-dd>
           </ui-dl>
         </ui-col>
         <ui-col>
           <ui-dl>
-            <ui-dt>Čas konání</ui-dt>
+            <ui-dt>Čas</ui-dt>
             <ui-dd>{{ training?.time }}</ui-dd>
           </ui-dl>
         </ui-col>
@@ -60,26 +72,68 @@
         </ui-col>
         <ui-col></ui-col>
       </ui-row>
+      <ng-container [ngTemplateOutlet]="contact"></ng-container>
     </ng-container>
+
     <ng-container *ngSwitchCase="2">
       <ui-row>
         <ui-col>
           <ui-dl>
-            <ui-dt>Datum konání</ui-dt>
+            <ui-dt>Termín</ui-dt>
             <ui-dd>{{ training?.date }}</ui-dd>
           </ui-dl>
         </ui-col>
-        <ui-col></ui-col>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Náročnost</ui-dt>
+            <ui-dd>{{ training?.difficulty }}</ui-dd>
+          </ui-dl>
+        </ui-col>
       </ui-row>
       <ui-row>
+        <ui-col>
+          <ui-dl>
+            <ui-dt>Věk</ui-dt>
+            <ui-dd>{{ training?.age }}</ui-dd>
+          </ui-dl>
+        </ui-col>
         <ui-col>
           <ui-dl>
             <ui-dt>Adresa</ui-dt>
             <ui-dd>{{ training?.address }}</ui-dd>
           </ui-dl>
         </ui-col>
-        <ui-col></ui-col>
       </ui-row>
+      <ng-container [ngTemplateOutlet]="contact"></ng-container>
     </ng-container>
+
   </ng-container>
 </div>
+
+
+<ng-template #contact>
+  <ui-row>
+    <ui-col>
+      <ui-dl>
+        <ui-dt>Kontakt</ui-dt>
+        <ui-dd>
+          <div class="address">
+            <div class="address__row address__row--name">
+              {{ training?.leader?.name }}
+            </div>
+            <div class="address__row address__row--position">
+              {{ training?.leader?.function }}
+            </div>
+            <div class="address__row address__row--phone">
+              <a class="address__link" [href]="'callto:' + training?.leader?.phone">{{ training?.leader?.phone }}</a>
+            </div>
+            <div class="address__row address__row--email">
+              <a class="address__link" [href]="'mailto:' + training?.leader?.email">{{ training?.leader?.email }}</a>
+            </div>
+          </div>
+        </ui-dd>
+      </ui-dl>
+    </ui-col>
+    <ui-col></ui-col>
+  </ui-row>
+</ng-template>

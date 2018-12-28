@@ -8,8 +8,10 @@
   left: 0;
   right: 0;
   background: map-get($theme, background-primary) url("../../../../../assets/logo.svg") no-repeat center center;
-  background-size: 46.4rem 39.6rem;
   z-index: 11;
+  background-size: 35rem auto;
+
+  @media (min-width: $breakpoint-xs) {
+    background-size: 46.4rem auto;
+  }
 }
-
-

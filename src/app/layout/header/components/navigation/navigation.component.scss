@@ -6,7 +6,11 @@
 }
 
 .navigation__item {
-  margin-right: 5rem;
+  margin-right: 3rem;
+
+  @media (min-width: $breakpoint-xl) {
+    margin-right: 5rem;
+  }
 }
 
 .navigation__link {

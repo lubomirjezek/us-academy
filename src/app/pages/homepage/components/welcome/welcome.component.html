@@ -1,0 +1,14 @@
+<div class="welcome">
+  <h1 class="welcome__slogan" *ngIf="activeIndex === 0" [@fadeIn]>
+    Baví vás parkour?
+  </h1>
+  <h1 class="welcome__slogan" *ngIf="activeIndex === 1" [@fadeIn]>
+    Chcete se ho naučit?
+  </h1>
+  <h2 class="welcome__brand">Urban Sense Academy</h2>
+
+  <button class="welcome__button" ui-button="positive" (click)="scrollToMap()">
+    Vyberte město
+  </button>
+</div>
+

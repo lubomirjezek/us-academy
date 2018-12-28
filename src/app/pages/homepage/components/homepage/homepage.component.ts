@@ -51,7 +51,9 @@ export class HomepageComponent implements OnInit {
   }
 
   onIntersection(event): void {
-    this.isVisible = event.visible;
+    if (event.visible) {
+      this.isVisible = true;
+    }
   }
 
   fetchPins(): void {

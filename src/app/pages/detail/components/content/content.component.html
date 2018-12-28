@@ -1,7 +1,7 @@
 <div class="content">
-  <ui-row *ngIf="training?.text">
+  <ui-row class="content__row content__row--desc" *ngIf="training?.text">
     <ui-col>
-      {{ training?.text }}
+      <p>{{ training?.text }}</p>
     </ui-col>
   </ui-row>
 

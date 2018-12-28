@@ -18,6 +18,8 @@ import { ButtonModule } from '../../ui/button/button.module';
 import { ContactComponent } from './components/contact/contact.component';
 import { GreyboxModule } from '../../ui/greybox/greybox.module';
 import { TooltipModule } from '../../ui/tooltip/tooltip.module';
+import { WelcomeComponent } from './components/welcome/welcome.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { TooltipModule } from '../../ui/tooltip/tooltip.module';
     MapComponent,
     PinComponent,
     CityComponent,
-    ContactComponent
+    ContactComponent,
+    WelcomeComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,33 @@
+@import "../../../../../scss/variables";
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.welcome__slogan {
+  color: map-get($theme, text-secondary);
+  text-transform: uppercase;
+  font-size: 16rem;
+  letter-spacing: 2rem;
+  text-align: center;
+  width: 95rem;
+  font-family: map-get($theme, font-secondary);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.welcome__brand {
+  font-size: 4rem;
+  color: map-get($theme, text-secondary);
+  font-weight: map-get($theme, font-weight-normal);
+}
+
+.welcome__button {
+  margin-top: 8rem;
+  height: 6rem;
+  padding: 0 7.5rem;
+  font-size: 1.8rem;
+}

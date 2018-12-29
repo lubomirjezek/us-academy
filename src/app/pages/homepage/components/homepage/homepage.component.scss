@@ -16,3 +16,16 @@
   align-items: flex-end;
 }
 
+.about-us--desktop {
+  display: none;
+
+  @media (min-height: $breakpoint-l) {
+    display: flex;
+  }
+}
+
+.about-us--mobile {
+  @media (min-height: $breakpoint-l) {
+    display: none;
+  }
+}

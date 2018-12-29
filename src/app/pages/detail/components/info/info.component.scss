@@ -4,15 +4,27 @@
 
 .info__bar {
   background-color: rgba(13, 108, 180, .7);
-  height: 10rem;
+  height: 15rem;
   display: flex;
   justify-content: center;
+
+  @media (min-width: $breakpoint-xs) {
+    height: 10rem;
+  }
 }
 
 .info__city {
   text-align: left;
   color: map-get($theme, text-secondary);
   margin: 0;
+  line-height: 1.1;
+  font-size: 4rem;
+  letter-spacing: .6rem;
+
+  @media (min-width: $breakpoint-xs) {
+    font-size: 6rem;
+    letter-spacing: .8rem;
+  }
 }
 
 .info__type {
@@ -26,6 +38,40 @@
   max-width: 120rem;
   width: 100%;
   padding: 0 2rem;
+  flex-wrap: wrap;
+
+  @media (min-width: $breakpoint-xs) {
+    flex-wrap: nowrap;
+  }
+}
+.info__col--price,
+.info__col--signed {
+  margin: 0;
+  flex: 0 0 50%;
+  justify-content: flex-start;
+
+  @media (min-width: $breakpoint-xs) {
+    flex: 1 1 0;
+  }
+}
+
+.info__col--signed {
+  justify-content: flex-end;
+
+  @media (min-width: $breakpoint-xs) {
+    justify-content: center;
+  }
+}
+
+.info__col--actions {
+  margin: 0;
+  flex: 0 0 100%;
+  justify-content: center;
+
+  @media (min-width: $breakpoint-xs) {
+    flex: 1 1 0;
+    justify-content: flex-end;
+  }
 }
 
 .info__price,

@@ -6,13 +6,13 @@
 
   <div class="info__bar">
     <ui-row class="info__container">
-      <ui-col vertical-center>
+      <ui-col class="info__col--price" vertical-center>
         <span class="info__price">{{ training?.price }},-</span>
       </ui-col>
-      <ui-col vertical-center horizontal-center>
+      <ui-col class="info__col--signed" vertical-center>
         <span class="info__signed">{{ training?.paid }}/{{ training?.capacity }}</span>
       </ui-col>
-      <ui-col vertical-center horizontal-right>
+      <ui-col class="info__col--actions" vertical-center>
         <button ui-button="positive">
           {{ training?.paid >= training?.capacity ? 'Přihlásit náhradníka' : 'Rezervovat si místo' }}
         </button>

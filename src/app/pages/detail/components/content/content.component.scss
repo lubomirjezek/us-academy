@@ -34,3 +34,11 @@
     text-decoration: underline;
   }
 }
+
+.ui-row {
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-s) {
+    flex-direction: row;
+  }
+}

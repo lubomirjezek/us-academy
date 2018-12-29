@@ -9,6 +9,10 @@
 
 .slide {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
+
+.slide--welcome {
+  align-items: flex-end;
+}
+

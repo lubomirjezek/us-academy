@@ -3,7 +3,7 @@
 .header {
   height: 11.7rem;
   display: flex;
-  padding: 0 5rem;
+  padding: 0 2rem;
   transition: all 250ms;
   position: fixed;
   top: 0;
@@ -11,6 +11,10 @@
   right: 0;
   background-color: rgba(255, 255, 255, 0);
   z-index: 10;
+
+  @media (min-width: $breakpoint-xxs) {
+    padding: 0 5rem;
+  }
 }
 
 .header--scrolled {

@@ -10,24 +10,51 @@
 .welcome__slogan {
   color: map-get($theme, text-secondary);
   text-transform: uppercase;
-  font-size: 16rem;
-  letter-spacing: 2rem;
   text-align: center;
-  width: 95rem;
   font-family: map-get($theme, font-secondary);
   line-height: 1.1;
   margin: 0;
+  width: 40rem;
+
+  @media (min-width: $breakpoint-s) {
+    font-size: 10rem;
+    letter-spacing: 1.5rem;
+    width: 60rem;
+  }
+
+  @media (min-width: $breakpoint-l) {
+    font-size: 16rem;
+    letter-spacing: 2rem;
+    width: 95rem;
+  }
 }
 
 .welcome__brand {
-  font-size: 4rem;
   color: map-get($theme, text-secondary);
   font-weight: map-get($theme, font-weight-normal);
+  margin: 3rem 0 5rem 0;
+
+  @media (min-height: $breakpoint-xs) {
+    margin-bottom: 10rem;
+  }
+
+  @media (min-height: $breakpoint-l) {
+    margin-bottom: 15rem;
+  }
+
+  @media (min-width: $breakpoint-s) {
+    font-size: 4rem;
+  }
 }
 
 .welcome__button {
-  margin-top: 8rem;
   height: 6rem;
   padding: 0 7.5rem;
   font-size: 1.8rem;
+  margin-bottom: 3rem;
+
+  @media (min-height: $breakpoint-xxs) {
+    margin-bottom: 5rem;
+  }
+
 }

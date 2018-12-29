@@ -11,6 +11,18 @@
 
 .table__tr {
   display: flex;
+  border-bottom: 0.1rem solid map-get($theme, line-secondary);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.table__tr--highlight {
+  &:hover {
+    background-color: map-get($theme, background-primary);
+    box-shadow: -3px 4px 9px 0px rgba(0, 0, 0, 0.1);
+  }
 }
 
 .table__th,
@@ -25,7 +37,6 @@
 
 .table__th {
   font-size: 1.4rem;
-  border-bottom: 0.1rem solid map-get($theme, line-secondary);
 }
 
 .table__td {
@@ -44,3 +55,20 @@
 .table__td--date { }
 
 .table__td--time { }
+
+.table__td--actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section-select {
+  margin-top: 8rem;
+  border-bottom: .2rem solid map-get($theme, color-secondary);
+}
+
+.section-select__button {
+  font-size: 3rem;
+  height: 6.5rem;
+  font-weight: map-get($theme, font-weight-bold);
+  margin-bottom: 0.5rem;
+}

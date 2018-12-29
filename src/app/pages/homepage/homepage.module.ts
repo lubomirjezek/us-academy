@@ -20,6 +20,7 @@ import { GreyboxModule } from '../../ui/greybox/greybox.module';
 import { TooltipModule } from '../../ui/tooltip/tooltip.module';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { GridModule } from '../../ui/grid/grid.module';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     ContainerModule,
     ButtonModule,
     GreyboxModule,
-    TooltipModule
+    TooltipModule,
+    GridModule
   ]
 })
 export class HomepageModule { }

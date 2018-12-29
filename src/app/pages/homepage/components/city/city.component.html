@@ -1,16 +1,33 @@
 <div class="city" *ngIf="city?.loaded">
   <usacademy-container>
-    <br><br><br>
-    <button (click)="selectActiveSection(0)" [ui-button]="activeSection === 0 ? 'negative' : 'positive'">
-      Kroužky
-    </button>
-    <button (click)="selectActiveSection(1)" [ui-button]="activeSection === 1 ? 'negative' : 'positive'">
-      Workshopy
-    </button>
-    <button (click)="selectActiveSection(2)" [ui-button]="activeSection === 2 ? 'negative' : 'positive'">
-      Příměstské tábory
-    </button>
-    <br><br><br>
+
+    <ui-row class="section-select">
+      <ui-col vertical-center>
+        <button
+          class="section-select__button"
+          (click)="selectActiveSection(0)"
+          [disabled]="!city?.data?.trainings?.length"
+          ui-button
+        >Kroužky</button>
+      </ui-col>
+      <ui-col vertical-center horizontal-center>
+        <button
+          class="section-select__button"
+          (click)="selectActiveSection(2)"
+          [disabled]="!city?.data?.camps?.length"
+          ui-button
+        >Příměstské tábory</button>
+      </ui-col>
+      <ui-col vertical-center horizontal-right>
+        <button
+          class="section-select__button"
+          (click)="selectActiveSection(1)"
+          [disabled]="!city?.data?.workshops?.length"
+          ui-button
+        >Workshopy</button>
+      </ui-col>
+    </ui-row>
+
     <ng-container *ngIf="activeSection === 0">
       <div class="table" [@fadeInStagger]="city?.data?.trainings?.length">
         <div class="table__tr">
@@ -22,7 +39,7 @@
           <div class="table__th">Cena</div>
           <div class="table__th"></div>
         </div>
-        <div class="table__tr" *ngFor="let training of city?.data?.trainings">
+        <div class="table__tr table__tr--highlight" *ngFor="let training of city?.data?.trainings">
           <div class="table__td table__td--city">
             {{ city.data.parent.name }}
           </div>
@@ -57,7 +74,7 @@
           <div class="table__th">Cena</div>
           <div class="table__th"></div>
         </div>
-        <div class="table__tr" *ngFor="let workshop of city?.data?.workshops">
+        <div class="table__tr table__tr--highlight" *ngFor="let workshop of city?.data?.workshops">
           <div class="table__td table__td--city">
             {{ city.data.parent.name }}
           </div>
@@ -88,7 +105,7 @@
           <div class="table__th">Cena</div>
           <div class="table__th"></div>
         </div>
-        <div class="table__tr" *ngFor="let camp of city?.data?.camps">
+        <div class="table__tr table__tr--highlight" *ngFor="let camp of city?.data?.camps">
           <div class="table__td table__td--city">
             {{ city.data.parent.name }}
           </div>

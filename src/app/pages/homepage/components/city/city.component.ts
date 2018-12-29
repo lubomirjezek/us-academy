@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 import { ScrollToService } from 'ng2-scroll-to-el';
 
@@ -23,7 +23,7 @@ import { StoreData } from '../../../../models/store-data';
     ])
   ]
 })
-export class CityComponent implements OnInit {
+export class CityComponent implements OnInit, OnChanges {
 
   @Input() city: StoreData<City>;
 
@@ -34,6 +34,12 @@ export class CityComponent implements OnInit {
   ) { }
 
   ngOnInit() { }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.hasOwnProperty('city')) {
+      this.activeSection = 0;
+    }
+  }
 
   selectActiveSection(id: number): void {
     this.activeSection = id;

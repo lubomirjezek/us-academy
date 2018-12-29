@@ -1,6 +1,6 @@
 <div class="map">
   <h1>Výběr měst</h1>
-  <div class="map__container">
+  <div class="map__container map__container--desktop">
     <img class="map__img" src="assets/map.png" alt="Česká republika">
 
     <ng-container *ngFor="let pin of pins">
@@ -17,6 +17,11 @@
         </div>
       </ng-template>
     </ng-container>
+  </div>
+  <div class="map__container map__container--mobile">
+    <button class="map__button" ui-button="negative" *ngFor="let pin of pins" (click)="selectCity(pin.id)">
+      {{ pin.name }}
+    </button>
   </div>
 </div>
 

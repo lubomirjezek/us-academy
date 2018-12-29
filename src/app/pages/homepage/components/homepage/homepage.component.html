@@ -2,17 +2,16 @@
   <usacademy-welcome></usacademy-welcome>
 </usacademy-slide>
 
+
+<div id="o-nas"></div>
 <usacademy-slide class="slide about-us--desktop">
   <usacademy-about-us
-    id="o-nas"
-    inViewport
-    (inViewportAction)="onIntersection($event)"
-    [@expandIn]="isVisible"
-  ></usacademy-about-us>
+    inViewport (inViewportAction)="onIntersection($event)" [@expandIn]="isVisible"></usacademy-about-us>
 </usacademy-slide>
+<usacademy-about-us class="about-us--mobile"></usacademy-about-us>
 
-<usacademy-about-us class="about-us--mobile" id="o-nas"></usacademy-about-us>
+<usacademy-map id="vyber-mest" [pins]="pins | async"></usacademy-map>
 
-<!--<usacademy-map id="vyber-mest" [pins]="pins | async"></usacademy-map>
 <usacademy-city id="terminy" [city]="city | async"></usacademy-city>
-<usacademy-contact id="kontakt"></usacademy-contact>-->
+
+<usacademy-contact id="kontakt"></usacademy-contact>

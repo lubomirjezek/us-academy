@@ -9,19 +9,7 @@ import { StoreData } from '../../../../models/store-data';
 @Component({
   selector: 'usacademy-city',
   templateUrl: './city.component.html',
-  styleUrls: ['./city.component.scss'],
-  animations: [
-    trigger('fadeInStagger', [
-      transition('* => *', [
-        query(':enter', [
-          style({ opacity: 0 }),
-          stagger(70, [
-            animate('500ms 300ms cubic-bezier(.25, .8, .25, 1)', style({ opacity: 1 }))
-          ])
-        ],  { optional: true })
-      ])
-    ])
-  ]
+  styleUrls: ['./city.component.scss']
 })
 export class CityComponent implements OnInit, OnChanges {
 

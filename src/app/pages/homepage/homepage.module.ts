@@ -23,6 +23,10 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { GridModule } from '../../ui/grid/grid.module';
 import { IconModule } from '../../ui/icon/icon.module';
+import { TrainingsComponent } from './components/trainings/trainings.component';
+import { TrainingsListComponent } from './components/trainings-list/trainings-list.component';
+import { CampsListComponent } from './components/camps-list/camps-list.component';
+import { WorkshopsListComponent } from './components/workshops-list/workshops-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { IconModule } from '../../ui/icon/icon.module';
     CityComponent,
     ContactComponent,
     WelcomeComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    TrainingsComponent,
+    TrainingsListComponent,
+    CampsListComponent,
+    WorkshopsListComponent
   ],
   imports: [
     CommonModule,

@@ -5,5 +5,6 @@ export interface City {
   parent: Pin;
   workshops: Training[];
   camps: Training[];
-  trainings: Training[];
+  trainings_beginners: Training[];
+  trainings_advanced: Training[];
 }

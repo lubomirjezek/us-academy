@@ -1,0 +1,8 @@
+@import "../../../../../scss/variables";
+
+.trainings__headline {
+  margin-left: 3rem;
+  font-size: 3rem;
+  text-align: left;
+  font-weight: map-get($theme, font-weight-normal);
+}

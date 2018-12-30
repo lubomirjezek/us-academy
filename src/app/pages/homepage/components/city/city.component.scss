@@ -5,62 +5,6 @@
   padding: 0 0 8rem 0;
 }
 
-.table {
-  border-collapse: collapse;
-}
-
-.table__tr {
-  display: flex;
-  border-bottom: 0.1rem solid map-get($theme, line-secondary);
-
-  &:last-child {
-    border-bottom: 0;
-  }
-}
-
-.table__tr--highlight {
-  &:hover {
-    background-color: map-get($theme, background-primary);
-    box-shadow: -3px 4px 9px 0px rgba(0, 0, 0, 0.1);
-  }
-}
-
-.table__th,
-.table__td {
-  flex: 1;
-  text-align: left;
-  padding: 3rem;
-  font-weight: map-get($theme, font-weight-normal);
-  display: flex;
-  align-items: center;
-}
-
-.table__th {
-  font-size: 1.4rem;
-}
-
-.table__td {
-  font-size: 1.6rem;
-  font-weight: map-get($theme, font-weight-bold);
-}
-
-.table__td--price { }
-
-.table__td--city {
-  text-transform: uppercase;
-}
-
-.table__td--signed { }
-
-.table__td--date { }
-
-.table__td--time { }
-
-.table__td--actions {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .section-select {
   margin-top: 8rem;
   border-bottom: .2rem solid map-get($theme, color-secondary);
@@ -71,4 +15,62 @@
   height: 6.5rem;
   font-weight: map-get($theme, font-weight-bold);
   margin-bottom: 0.5rem;
+}
+
+:host /deep/ {
+  .table {
+    border-collapse: collapse;
+  }
+
+  .table__tr {
+    display: flex;
+    border-bottom: 0.1rem solid map-get($theme, line-secondary);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .table__tr--highlight {
+    &:hover {
+      background-color: map-get($theme, background-primary);
+      box-shadow: -3px 4px 9px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .table__th,
+  .table__td {
+    flex: 1;
+    text-align: left;
+    padding: 3rem;
+    font-weight: map-get($theme, font-weight-normal);
+    display: flex;
+    align-items: center;
+  }
+
+  .table__th {
+    font-size: 1.4rem;
+  }
+
+  .table__td {
+    font-size: 1.6rem;
+    font-weight: map-get($theme, font-weight-bold);
+  }
+
+  .table__td--price { }
+
+  .table__td--city {
+    text-transform: uppercase;
+  }
+
+  .table__td--signed { }
+
+  .table__td--date { }
+
+  .table__td--time { }
+
+  .table__td--actions {
+    display: flex;
+    justify-content: flex-end;
+  }
 }

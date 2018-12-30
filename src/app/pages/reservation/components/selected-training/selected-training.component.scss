@@ -1,0 +1,37 @@
+@import "../../../../../scss/variables";
+
+.selected-training {
+  background-color: map-get($theme, background-alternative);
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.selected-training__city,
+.selected-training__type,
+.selected-training__price {
+  margin: 0.2rem 0;
+}
+
+.selected-training__city {
+  font-size: 2.4rem;
+  letter-spacing: .4rem;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: map-get($theme, font-secondary);
+  font-weight: map-get($theme, font-weight-bold);
+}
+
+.selected-training__type { }
+
+.selected-training__price {
+  color: map-get($theme, color-secondary);
+  font-size: 2.4rem;
+}
+
+.selected-training__spacer {
+  border: 0;
+  color: map-get($theme, line-primary);
+  background-color: map-get($theme, line-primary);
+  height: 0.1rem;
+  margin: 3rem 0;
+}

@@ -1,3 +1,28 @@
-<p>
-  selected-training works!
-</p>
+<div class="selected-training">
+  <ng-container *ngIf="!!training; else noCity">
+    <div class="selected-training__city">
+      {{ training?.city?.name }}
+    </div>
+    <div class="selected-training__type">
+      {{ training?.type | trainingTypeToString }}
+    </div>
+    <div class="selected-training__price">
+      {{ training?.price }},-
+    </div>
+    <hr class="selected-training__spacer">
+    <div>TODO</div>
+  </ng-container>
+  <ng-template #noCity>
+    <ui-row>
+      <ui-col>Nemáte vybraný žádný kroužek / tábor / workshop.</ui-col>
+    </ui-row>
+    <ui-row>
+      <ui-col horizontal-center>
+        <a [routerLink]="['/']" ui-button="positive">
+          Přejít na výběr měst
+        </a>
+      </ui-col>
+    </ui-row>
+  </ng-template>
+</div>
+

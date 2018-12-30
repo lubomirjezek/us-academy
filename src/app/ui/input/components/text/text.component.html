@@ -1,0 +1,18 @@
+<div class="ui-input__wrapper">
+  <div class="ui-input__placeholder-wrapper">
+    <span class="ui-input__placeholder" *ngIf="hasPlaceholder()">
+      {{ placeholder }}
+    </span>
+    <span class="ui-input__placeholder--additional" *ngIf="hasAdditionalPlaceholder()">
+      ({{ additionalPlaceholder }})
+    </span>
+  </div>
+  <input
+    class="ui-input__element"
+    [class.ui-input__element--focused]="isFocused"
+    [formControl]="control"
+    [type]="type"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+  >
+</div>

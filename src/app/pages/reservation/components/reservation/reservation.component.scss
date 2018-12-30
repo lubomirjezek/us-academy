@@ -1,4 +1,39 @@
+@import "../../../../../scss/variables";
+
 :host {
   display: block;
   padding-top: 9rem;
+}
+
+.ui-col--form {
+  order: 3;
+}
+
+.ui-col--selected {
+  order: 2;
+}
+
+.ui-row {
+  flex-wrap: wrap;
+}
+
+.ui-col {
+  flex: 0 0 100%;
+}
+
+@media (min-width: $breakpoint-s) {
+  .ui-col {
+    flex: 1 1 0;
+  }
+
+  .ui-col--form {
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .ui-col--form {
+    flex: 2 2 0;
+    order: 1;
+  }
 }

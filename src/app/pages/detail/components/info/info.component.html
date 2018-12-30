@@ -14,9 +14,9 @@
           <span class="info__signed">{{ training?.paid }}/{{ training?.capacity }}</span>
         </ui-col>
         <ui-col class="info__col--actions" vertical-center>
-          <button ui-button="positive">
+          <a [routerLink]="['/', 'rezervace']" ui-button="positive">
             {{ training?.paid >= training?.capacity ? 'Přihlásit náhradníka' : 'Rezervovat si místo' }}
-          </button>
+          </a>
         </ui-col>
       </ui-row>
     </div>

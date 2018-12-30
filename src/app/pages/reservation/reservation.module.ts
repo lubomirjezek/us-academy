@@ -7,6 +7,9 @@ import { ReservationRoutingModule } from './reservation-routing.module';
 import { ContainerModule } from '../../layout/container/container.module';
 import { SelectedTrainingComponent } from './components/selected-training/selected-training.component';
 import { GridModule } from '../../ui/grid/grid.module';
+import { InputModule } from '../../ui/input/input.module';
+import { ButtonModule } from '../../ui/button/button.module';
+import { PipesModule } from '../../modules/pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { GridModule } from '../../ui/grid/grid.module';
     ReservationRoutingModule,
     ContainerModule,
     GridModule,
-    StoreModule
+    StoreModule,
+    InputModule,
+    ButtonModule,
+    PipesModule
   ]
 })
 export class ReservationModule { }

@@ -1,0 +1,22 @@
+.ui-input__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.ui-input__element {
+  height: 4.4rem;
+  flex: 1;
+  padding: 0 1.5rem;
+  outline: none;
+}
+
+.ui-input__placeholder-wrapper {
+  margin: 2rem 0 1rem 0;
+  flex: 1;
+}
+
+.ui-input__placeholder {
+  text-transform: uppercase;
+}
+
+.ui-input__placeholder--additional { }

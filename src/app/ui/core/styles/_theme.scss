@@ -2,10 +2,12 @@
 @import "../../button/components/button/button-theme";
 @import "../../greybox/components/greybox/greybox-theme";
 @import "../../list/components/desc-list/desc-list-theme";
+@import "../../input/components/text/text-theme";
 
 @mixin create-theme($theme) {
   @include icon-theme($theme);
   @include button-theme($theme);
   @include greybox-theme($theme);
   @include desc-list-theme($theme);
+  @include text-theme($theme);
 }

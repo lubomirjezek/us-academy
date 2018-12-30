@@ -1,5 +1,6 @@
 import { Pin } from './pin';
 import { Leader } from './leader';
+import { Image } from './image';
 
 export interface Training {
   id: string;
@@ -19,4 +20,5 @@ export interface Training {
   leader: Leader;
   age: string;
   difficulty: string;
+  image: Image;
 }

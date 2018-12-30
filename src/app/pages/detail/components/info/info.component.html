@@ -1,22 +1,25 @@
-<div class="info">
-  <usacademy-container>
-    <h1 class="info__city">{{ training?.city?.name }}</h1>
-    <h2 class="info__type">{{ training?.type | trainingTypeToString }}</h2>
-  </usacademy-container>
+<usacademy-slide class="slide" [style.background-image]="getBackground()">
+  <div class="info">
+    <usacademy-container>
+      <h1 class="info__city">{{ training?.city?.name }}</h1>
+      <h2 class="info__type">{{ training?.type | trainingTypeToString }}</h2>
+    </usacademy-container>
 
-  <div class="info__bar">
-    <ui-row class="info__container">
-      <ui-col class="info__col--price" vertical-center>
-        <span class="info__price">{{ training?.price }},-</span>
-      </ui-col>
-      <ui-col class="info__col--signed" vertical-center>
-        <span class="info__signed">{{ training?.paid }}/{{ training?.capacity }}</span>
-      </ui-col>
-      <ui-col class="info__col--actions" vertical-center>
-        <button ui-button="positive">
-          {{ training?.paid >= training?.capacity ? 'Přihlásit náhradníka' : 'Rezervovat si místo' }}
-        </button>
-      </ui-col>
-    </ui-row>
+    <div class="info__bar">
+      <ui-row class="info__container">
+        <ui-col class="info__col--price" vertical-center>
+          <span class="info__price">{{ training?.price }},-</span>
+        </ui-col>
+        <ui-col class="info__col--signed" vertical-center>
+          <span class="info__signed">{{ training?.paid }}/{{ training?.capacity }}</span>
+        </ui-col>
+        <ui-col class="info__col--actions" vertical-center>
+          <button ui-button="positive">
+            {{ training?.paid >= training?.capacity ? 'Přihlásit náhradníka' : 'Rezervovat si místo' }}
+          </button>
+        </ui-col>
+      </ui-row>
+    </div>
   </div>
-</div>
+</usacademy-slide>
+

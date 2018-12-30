@@ -1,6 +1,15 @@
 @import "../../../../../scss/variables";
 
-.info { }
+.slide {
+  background: no-repeat top center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+
+.info {
+  flex: 1;
+}
 
 .info__bar {
   background-color: rgba(13, 108, 180, .7);

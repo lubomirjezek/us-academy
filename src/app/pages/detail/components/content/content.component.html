@@ -1,114 +1,117 @@
-<div class="content">
-  <ui-row class="content__row content__row--desc" *ngIf="training?.text">
-    <ui-col>
-      <p>{{ training?.text }}</p>
-    </ui-col>
-  </ui-row>
+<usacademy-container>
+  <div class="content">
+    <ui-row class="content__row content__row--desc" *ngIf="training?.text">
+      <ui-col>
+        <p>{{ training?.text }}</p>
+      </ui-col>
+    </ui-row>
 
-  <ng-container [ngSwitch]="training?.type">
+    <ng-container [ngSwitch]="training?.type">
 
-    <ng-container *ngSwitchCase="0">
-      <ui-row>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Období</ui-dt>
-            <ui-dd>{{ training?.season }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Den kroužků</ui-dt>
-            <ui-dd>{{ training?.day }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-      </ui-row>
-      <ui-row>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Čas</ui-dt>
-            <ui-dd>{{ training?.time }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Adresa</ui-dt>
-            <ui-dd>{{ training?.address }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-      </ui-row>
-      <ui-row>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Trenéři</ui-dt>
-            <ui-dd>{{ training?.trainer }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-        <ui-col></ui-col>
-      </ui-row>
-      <ng-container [ngTemplateOutlet]="contact"></ng-container>
+      <ng-container *ngSwitchCase="0">
+        <ui-row>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Období</ui-dt>
+              <ui-dd>{{ training?.season }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Den kroužků</ui-dt>
+              <ui-dd>{{ training?.day }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+        </ui-row>
+        <ui-row>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Čas</ui-dt>
+              <ui-dd>{{ training?.time }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Adresa</ui-dt>
+              <ui-dd>{{ training?.address }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+        </ui-row>
+        <ui-row>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Trenéři</ui-dt>
+              <ui-dd>{{ training?.trainer }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+          <ui-col></ui-col>
+        </ui-row>
+        <ng-container [ngTemplateOutlet]="contact"></ng-container>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="1">
+        <ui-row>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Termín</ui-dt>
+              <ui-dd>{{ training?.date }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Čas</ui-dt>
+              <ui-dd>{{ training?.time }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+        </ui-row>
+        <ui-row>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Adresa</ui-dt>
+              <ui-dd>{{ training?.address }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+          <ui-col></ui-col>
+        </ui-row>
+        <ng-container [ngTemplateOutlet]="contact"></ng-container>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="2">
+        <ui-row>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Termín</ui-dt>
+              <ui-dd>{{ training?.date }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Náročnost</ui-dt>
+              <ui-dd>{{ training?.difficulty }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+        </ui-row>
+        <ui-row>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Věk</ui-dt>
+              <ui-dd>{{ training?.age }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+          <ui-col>
+            <ui-dl>
+              <ui-dt>Adresa</ui-dt>
+              <ui-dd>{{ training?.address }}</ui-dd>
+            </ui-dl>
+          </ui-col>
+        </ui-row>
+        <ng-container [ngTemplateOutlet]="contact"></ng-container>
+      </ng-container>
+
     </ng-container>
+  </div>
+</usacademy-container>
 
-    <ng-container *ngSwitchCase="1">
-      <ui-row>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Termín</ui-dt>
-            <ui-dd>{{ training?.date }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Čas</ui-dt>
-            <ui-dd>{{ training?.time }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-      </ui-row>
-      <ui-row>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Adresa</ui-dt>
-            <ui-dd>{{ training?.address }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-        <ui-col></ui-col>
-      </ui-row>
-      <ng-container [ngTemplateOutlet]="contact"></ng-container>
-    </ng-container>
-
-    <ng-container *ngSwitchCase="2">
-      <ui-row>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Termín</ui-dt>
-            <ui-dd>{{ training?.date }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Náročnost</ui-dt>
-            <ui-dd>{{ training?.difficulty }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-      </ui-row>
-      <ui-row>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Věk</ui-dt>
-            <ui-dd>{{ training?.age }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-        <ui-col>
-          <ui-dl>
-            <ui-dt>Adresa</ui-dt>
-            <ui-dd>{{ training?.address }}</ui-dd>
-          </ui-dl>
-        </ui-col>
-      </ui-row>
-      <ng-container [ngTemplateOutlet]="contact"></ng-container>
-    </ng-container>
-
-  </ng-container>
-</div>
 
 
 <ng-template #contact>

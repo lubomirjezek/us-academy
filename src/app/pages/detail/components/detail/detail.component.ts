@@ -16,6 +16,7 @@ import { GetDetail } from '../../actions/detail.actions';
 export class DetailComponent implements OnInit, OnDestroy {
   destroy: Subject<null> = new Subject<null>();
   training: Observable<Training>;
+  background: string;
 
   constructor(
     private store: Store<any>,

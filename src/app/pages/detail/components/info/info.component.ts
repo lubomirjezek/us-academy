@@ -15,4 +15,8 @@ export class InfoComponent implements OnInit {
 
   ngOnInit() { }
 
+  getBackground(): string {
+    return this.training && this.training.image ? `url(${this.training.image.path})` : `url('../../../../../assets/bg_detail.png')`;
+  }
+
 }

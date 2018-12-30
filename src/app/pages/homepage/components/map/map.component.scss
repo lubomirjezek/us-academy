@@ -64,7 +64,16 @@
 .map__img { }
 
 .map__pin {
+  display: block;
+  position: absolute;
   cursor: pointer;
+  font-size: 4rem;
+  color: map-get($theme, color-secondary);
+  transition: color 100ms;
+
+  &:hover {
+    color: map-get($theme, color-primary);
+  }
 }
 
 .map__tooltip{

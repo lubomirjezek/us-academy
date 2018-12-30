@@ -1,21 +1,16 @@
 @import "../../../../../scss/variables";
 
 .logo {
-  display: flex;
-  height: 8rem;
-  width: 8rem;
-  align-items: center;
-  justify-content: center;
+  text-decoration: none;
+  color: map-get($theme, color-secondary);
 }
 
-.logo--scrolled {
-  height: 6.2rem;
-  width: 6.2rem;
+.logo__icon {
+  font-size: 9rem;
 }
 
-.logo__img {
-  object-fit: contain;
-  height: 100%;
+.logo__icon--scrolled {
+  font-size: 6.2rem;
 }
 
 

@@ -22,6 +22,7 @@ import { TooltipModule } from '../../ui/tooltip/tooltip.module';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { GridModule } from '../../ui/grid/grid.module';
+import { IconModule } from '../../ui/icon/icon.module';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { GridModule } from '../../ui/grid/grid.module';
     GreyboxModule,
     TooltipModule,
     GridModule,
-    ScrollToModule
+    ScrollToModule,
+    IconModule
   ]
 })
 export class HomepageModule { }

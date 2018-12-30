@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { GridModule } from '../../ui/grid/grid.module';
+import { IconModule } from '../../ui/icon/icon.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { GridModule } from '../../ui/grid/grid.module';
   imports: [
     CommonModule,
     RouterModule,
-    GridModule
+    GridModule,
+    IconModule
   ],
   exports: [
     FooterComponent

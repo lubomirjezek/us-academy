@@ -9,6 +9,9 @@ const routes: Routes = [
     path: 'gdpr',
     loadChildren: './pages/gdpr/gdpr.module#GdprModule'
   }, {
+    path: 'rezervace',
+    loadChildren: './pages/reservation/reservation.module#ReservationModule'
+  }, {
     path: ':city',
     loadChildren: './pages/detail/detail.module#DetailModule'
   }
@@ -17,10 +20,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      // anchorScrolling: 'enabled',
-      // scrollPositionRestoration: 'enabled',
-      enableTracing: false,
-      // onSameUrlNavigation: 'reload'
+      enableTracing: false
     }),
   ],
   exports: [

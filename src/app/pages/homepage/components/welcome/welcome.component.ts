@@ -2,7 +2,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { transition, trigger, useAnimation } from '@angular/animations';
 import { interval, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { ScrollToService } from 'ng2-scroll-to-el';
 
 import { fade } from '../../../../animations/fade.animation';
 
@@ -39,9 +38,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
   destroy: Subject<null> = new Subject<null>();
   activeIndex = 0;
 
-  constructor(
-    private scrollService: ScrollToService
-  ) { }
+  constructor() { }
 
   ngOnInit() {
     interval(4000)
@@ -55,10 +52,6 @@ export class WelcomeComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.destroy.next();
-  }
-
-  scrollToMap(): void {
-    this.scrollService.scrollTo('#vyber-mest', 300, -90);
   }
 
 }

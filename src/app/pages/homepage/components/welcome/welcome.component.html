@@ -7,8 +7,13 @@
   </h1>
   <h2 class="welcome__brand">Urban Sense Academy</h2>
 
-  <button class="welcome__button" ui-button="positive" (click)="scrollToMap()">
-    Vyberte město
-  </button>
+  <a class="welcome__button"
+     [routerLink]="['/']"
+     [scrollDuration]="300"
+     [scrollOffset]="-110"
+     [fragment]="'vyber-mest'"
+     [scrollTo]="'#vyber-mest'"
+     ui-button="positive"
+  >Vyberte město</a>
 </div>
 

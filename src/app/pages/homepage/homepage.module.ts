@@ -4,6 +4,7 @@ import { InViewportModule } from 'ng-in-viewport';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { RouterModule } from '@angular/router';
+import { ScrollToModule } from 'ng2-scroll-to-el';
 
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { HomepageRoutingModule } from './homepage-routing.module';
@@ -46,7 +47,8 @@ import { GridModule } from '../../ui/grid/grid.module';
     ButtonModule,
     GreyboxModule,
     TooltipModule,
-    GridModule
+    GridModule,
+    ScrollToModule
   ]
 })
 export class HomepageModule { }

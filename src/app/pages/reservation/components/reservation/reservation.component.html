@@ -16,7 +16,7 @@
             type="text"
             placeholder="Jméno a příjmení"
             additionalPlaceholder="zákonného zástupce"
-            [control]="form.controls.name"
+            [control]="form.controls.parent"
           ></ui-input>
         </ui-col>
       </ui-row>
@@ -41,14 +41,14 @@
           <ui-input
             type="text"
             placeholder="Město"
-            [control]="form.controls.email"
+            [control]="form.controls.city"
           ></ui-input>
         </ui-col>
         <ui-col>
           <ui-input
             type="text"
             placeholder="PSČ"
-            [control]="form.controls.phone"
+            [control]="form.controls.postal_code"
           ></ui-input>
         </ui-col>
       </ui-row>
@@ -57,7 +57,7 @@
           <ui-input
             type="text"
             placeholder="Ulice a č.p."
-            [control]="form.controls.email"
+            [control]="form.controls.street"
           ></ui-input>
         </ui-col>
         <ui-col></ui-col>
@@ -67,14 +67,14 @@
           <ui-input
             type="text"
             placeholder="Pojišťovna"
-            [control]="form.controls.phone"
+            [control]="form.controls.insurance"
           ></ui-input>
         </ui-col>
         <ui-col>
           <ui-input
             type="text"
             placeholder="Rodné číslo účastníka"
-            [control]="form.controls.email"
+            [control]="form.controls.pid_number"
           ></ui-input>
         </ui-col>
       </ui-row>
@@ -84,15 +84,26 @@
             type="text"
             placeholder="Firma"
             additionalPlaceholder="volitelné"
-            [control]="form.controls.email"
+            [control]="form.controls.company"
           ></ui-input>
         </ui-col>
+        <ui-col></ui-col>
+      </ui-row>
+      <ui-row>
         <ui-col>
           <ui-input
             type="text"
             placeholder="IČ"
             additionalPlaceholder="volitelné"
-            [control]="form.controls.phone"
+            [control]="form.controls.tin"
+          ></ui-input>
+        </ui-col>
+        <ui-col>
+          <ui-input
+            type="text"
+            placeholder="DIČ"
+            additionalPlaceholder="volitelné"
+            [control]="form.controls.vat"
           ></ui-input>
         </ui-col>
       </ui-row>
@@ -102,7 +113,7 @@
             type="text"
             placeholder="Zdravotní omezení"
             additionalPlaceholder="volitelné"
-            [control]="form.controls.note"
+            [control]="form.controls.condition"
           ></ui-input>
         </ui-col>
       </ui-row>
@@ -112,13 +123,13 @@
             type="text"
             placeholder="Poznámka"
             additionalPlaceholder="volitelné"
-            [control]="form.controls.note"
+            [control]="form.controls.text"
           ></ui-input>
         </ui-col>
       </ui-row>
     </ui-col>
     <ui-col class="ui-col--selected">
-      <usacademy-selected-training [training]="training | async"></usacademy-selected-training>
+      <usacademy-selected-training [training]="training"></usacademy-selected-training>
     </ui-col>
   </ui-row>
   <ui-row>

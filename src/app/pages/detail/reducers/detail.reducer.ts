@@ -55,4 +55,6 @@ export function reducer(state = initialState, action: All) {
 
 export const featureSelector = createFeatureSelector<State>(featureName);
 
-export const selectDetail = createSelector(featureSelector, state => state.detail.data);
+export const selectDetail = createSelector(featureSelector, state => {
+  return state ? state.detail.data : null;
+});

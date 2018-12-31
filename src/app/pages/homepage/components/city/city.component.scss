@@ -82,7 +82,7 @@
     font-weight: map-get($theme, font-weight-normal);
     display: flex;
     align-items: center;
-    min-width: 20rem;
+    min-width: 15rem;
     border-bottom: 0.1rem solid map-get($theme, line-secondary);
   }
 

@@ -3,17 +3,17 @@
 
     <ui-row class="section-select">
       <ui-col class="section-select__col section-select__col--trainings" vertical-center>
-        <button class="section-select__button" (click)="selectActiveSection(0)" ui-button>
+        <button class="section-select__button" (click)="selectActiveSection(0)" [ui-button]="activeSection === 0 ? 'negative' : 'none'">
           Kroužky
         </button>
       </ui-col>
       <ui-col class="section-select__col section-select__col--camps" vertical-center>
-        <button class="section-select__button" (click)="selectActiveSection(2)" ui-button>
+        <button class="section-select__button" (click)="selectActiveSection(2)" [ui-button]="activeSection === 2 ? 'negative' : 'none'">
           Příměstské tábory
         </button>
       </ui-col>
       <ui-col class="section-select__col section-select__col--workshops" vertical-center>
-        <button class="section-select__button" (click)="selectActiveSection(1)" ui-button>
+        <button class="section-select__button" (click)="selectActiveSection(1)" [ui-button]="activeSection === 1 ? 'negative' : 'none'">
           Workshopy
         </button>
       </ui-col>

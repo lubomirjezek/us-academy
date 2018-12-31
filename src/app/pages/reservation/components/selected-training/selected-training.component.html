@@ -10,7 +10,34 @@
       {{ training?.price }},-
     </div>
     <hr class="selected-training__spacer">
-    <div>TODO</div>
+
+    <ng-container [ngSwitch]="training?.type">
+      <ui-dl *ngSwitchCase="0">
+        <ui-dt>Den</ui-dt>
+        <ui-dd>{{ training?.day }}</ui-dd>
+        <ui-dt>Čas</ui-dt>
+        <ui-dd>{{ training?.time }}</ui-dd>
+        <ui-dt>Období</ui-dt>
+        <ui-dd>{{ training?.season }}</ui-dd>
+        <ui-dt>Adresa</ui-dt>
+        <ui-dd>{{ training?.address }}</ui-dd>
+      </ui-dl>
+      <ui-dl *ngSwitchCase="1">
+        <ui-dt>Termín</ui-dt>
+        <ui-dd>{{ training?.date }}</ui-dd>
+        <ui-dt>Čas</ui-dt>
+        <ui-dd>{{ training?.time }}</ui-dd>
+        <ui-dt>Adresa</ui-dt>
+        <ui-dd>{{ training?.address }}</ui-dd>
+      </ui-dl>
+      <ui-dl *ngSwitchCase="2">
+        <ui-dt>Termín</ui-dt>
+        <ui-dd>{{ training?.date }} - {{ training?.date_to }}</ui-dd>
+        <ui-dt>Adresa</ui-dt>
+        <ui-dd>{{ training?.address }}</ui-dd>
+      </ui-dl>
+    </ng-container>
+
   </ng-container>
   <ng-template #noCity>
     <ui-row>

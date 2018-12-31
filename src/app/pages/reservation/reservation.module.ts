@@ -10,6 +10,7 @@ import { GridModule } from '../../ui/grid/grid.module';
 import { InputModule } from '../../ui/input/input.module';
 import { ButtonModule } from '../../ui/button/button.module';
 import { PipesModule } from '../../modules/pipes/pipes.module';
+import { ListModule } from '../../ui/list/list.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PipesModule } from '../../modules/pipes/pipes.module';
     StoreModule,
     InputModule,
     ButtonModule,
-    PipesModule
+    PipesModule,
+    ListModule
   ]
 })
 export class ReservationModule { }

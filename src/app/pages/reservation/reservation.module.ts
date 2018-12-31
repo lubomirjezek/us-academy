@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { ReservationRoutingModule } from './reservation-routing.module';
@@ -11,6 +12,7 @@ import { InputModule } from '../../ui/input/input.module';
 import { ButtonModule } from '../../ui/button/button.module';
 import { PipesModule } from '../../modules/pipes/pipes.module';
 import { ListModule } from '../../ui/list/list.module';
+import { ReservationEffects } from './effects/reservation.effects';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,10 @@ import { ListModule } from '../../ui/list/list.module';
     InputModule,
     ButtonModule,
     PipesModule,
-    ListModule
+    ListModule,
+    EffectsModule.forFeature([
+      ReservationEffects
+    ])
   ]
 })
 export class ReservationModule { }

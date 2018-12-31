@@ -7,6 +7,7 @@ import { Training } from '../../../../models/training';
 import { selectDetail } from '../../../detail/reducers/detail.reducer';
 import { filter, takeUntil } from 'rxjs/operators';
 import { DataService } from '../../services/data.service';
+import { PostReservation } from '../../actions/reservation.actions';
 
 @Component({
   selector: 'usacademy-reservation',
@@ -36,8 +37,7 @@ export class ReservationComponent implements OnInit, OnDestroy {
   });
 
   constructor(
-    private store: Store<any>,
-    private service: DataService
+    private store: Store<any>
   ) { }
 
   ngOnInit() {
@@ -61,11 +61,8 @@ export class ReservationComponent implements OnInit, OnDestroy {
   }
 
   postReservation(): void {
-    console.log(this.form.value);
-
-    this.service
-      .postReservation(this.form.value)
-      .subscribe(value => console.log(value), value => console.log(value));
+    this.store.dispatch(new PostReservation(this.form.value));
+    this.form.reset();
   }
 
 }

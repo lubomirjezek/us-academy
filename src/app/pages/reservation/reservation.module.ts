@@ -13,11 +13,14 @@ import { ButtonModule } from '../../ui/button/button.module';
 import { PipesModule } from '../../modules/pipes/pipes.module';
 import { ListModule } from '../../ui/list/list.module';
 import { ReservationEffects } from './effects/reservation.effects';
+import { ModalModule } from '../../ui/modal/modal.module';
+import { ReservationSuccessModalComponent } from './components/reservation-success-modal/reservation-success-modal.component';
 
 @NgModule({
   declarations: [
     ReservationComponent,
-    SelectedTrainingComponent
+    SelectedTrainingComponent,
+    ReservationSuccessModalComponent
   ],
   imports: [
     CommonModule,
@@ -29,9 +32,13 @@ import { ReservationEffects } from './effects/reservation.effects';
     ButtonModule,
     PipesModule,
     ListModule,
+    ModalModule,
     EffectsModule.forFeature([
       ReservationEffects
     ])
+  ],
+  entryComponents: [
+    ReservationSuccessModalComponent
   ]
 })
 export class ReservationModule { }

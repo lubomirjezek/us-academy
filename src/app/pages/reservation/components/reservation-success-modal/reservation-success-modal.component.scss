@@ -1,0 +1,6 @@
+@import "../../../../../scss/variables";
+
+.ui-modal {
+  background-color: map-get($theme, toast-success);
+  color: map-get($theme, text-secondary);
+}

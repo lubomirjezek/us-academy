@@ -6,7 +6,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Training } from '../../../../models/training';
 import { selectDetail } from '../../../detail/reducers/detail.reducer';
 import { filter, takeUntil } from 'rxjs/operators';
-import { DataService } from '../../services/data.service';
 import { PostReservation } from '../../actions/reservation.actions';
 
 @Component({

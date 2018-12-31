@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'ui-input[type=text]',
+  selector: 'ui-input[type=text], ui-input[type=password], ui-input[type=textarea]',
   templateUrl: './text.component.html',
   styleUrls: ['./text.component.scss'],
   encapsulation: ViewEncapsulation.None,

@@ -4,10 +4,19 @@
 }
 
 .ui-input__element {
-  height: 4.4rem;
   flex: 1;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
   outline: none;
+}
+
+.ui-input__element--text {
+  height: 4.4rem;
+}
+
+.ui-input__element--textarea {
+  min-height: 8rem;
+  resize: vertical;
+  overflow: auto;
 }
 
 .ui-input__placeholder-wrapper {

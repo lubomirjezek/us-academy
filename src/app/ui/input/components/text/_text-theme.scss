@@ -2,11 +2,13 @@
   $font-primary:     map-get($theme, font-primary);
   $font-weight-bold: map-get($theme, font-weight-bold);
   $text-primary:     map-get($theme, text-primary);
-  $text-secondary:     map-get($theme, text-alternative);
+  $text-secondary:   map-get($theme, text-alternative);
   $color-primary:    map-get($theme, color-secondary);
 
   .ui-input__element {
     border: 0.1rem solid $text-primary;
+    font-family: $font-primary;
+    font-size: 1.6rem;
   }
 
   .ui-input__element--focused {

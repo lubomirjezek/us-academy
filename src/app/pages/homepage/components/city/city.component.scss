@@ -8,6 +8,39 @@
 .section-select {
   margin-top: 8rem;
   border-bottom: .2rem solid map-get($theme, color-secondary);
+  flex-direction: column;
+
+  @media (min-width: $breakpoint-m) {
+    flex-direction: row;
+  }
+}
+
+.section-select__col {
+  flex: 0 0 100%;
+  margin: 0;
+  justify-content: center;
+
+  @media (min-width: $breakpoint-m) {
+    flex: 1 1 0;
+  }
+}
+
+.section-select__col--trainings {
+  @media (min-width: $breakpoint-m) {
+    justify-content: flex-start;
+  }
+}
+
+.section-select__col--camps {
+  @media (min-width: $breakpoint-m) {
+    justify-content: center;
+  }
+}
+
+.section-select__col--workshops {
+  @media (min-width: $breakpoint-m) {
+    justify-content: flex-end;
+  }
 }
 
 .section-select__button {
@@ -20,14 +53,17 @@
 :host /deep/ {
   .table {
     border-collapse: collapse;
+    overflow-x: auto;
   }
 
   .table__tr {
     display: flex;
-    border-bottom: 0.1rem solid map-get($theme, line-secondary);
 
     &:last-child {
-      border-bottom: 0;
+      .table__th,
+      .table__td {
+        border-bottom: 0;
+      }
     }
   }
 
@@ -46,6 +82,8 @@
     font-weight: map-get($theme, font-weight-normal);
     display: flex;
     align-items: center;
+    min-width: 20rem;
+    border-bottom: 0.1rem solid map-get($theme, line-secondary);
   }
 
   .table__th {

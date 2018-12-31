@@ -9,6 +9,9 @@ const routes: Routes = [
     path: 'gdpr',
     loadChildren: './pages/gdpr/gdpr.module#GdprModule'
   }, {
+    path: 'podminky',
+    loadChildren: './pages/conditions/conditions.module#ConditionsModule'
+  }, {
     path: 'rezervace',
     loadChildren: './pages/reservation/reservation.module#ReservationModule'
   }, {

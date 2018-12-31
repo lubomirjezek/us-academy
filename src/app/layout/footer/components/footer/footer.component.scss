@@ -30,14 +30,13 @@
 
   @media (min-width: $breakpoint-l) {
     padding: 6rem 0;
-    flex-direction: row;
 
     &:first-child {
-      justify-content: flex-start;
+      align-items: flex-start;
     }
 
     &:last-child {
-      justify-content: flex-end;
+      align-items: flex-end;
     }
   }
 }
@@ -46,6 +45,7 @@
 .footer__link {
   color: map-get($theme, text-alternative);
   font-size: 1.2rem;
+  flex: 0 0 100%;
 }
 
 .footer__link {

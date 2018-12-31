@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { GdprComponent } from './components/gdpr/gdpr.component';
-import { GdprRoutingModule } from './gdpr-routing.module';
+import { ConditionsComponent } from './components/conditions/conditions.component';
+import { ConditionsRoutingModule } from './conditions-routing.module';
 import { ContainerModule } from '../../layout/container/container.module';
 
 @NgModule({
   declarations: [
-    GdprComponent
+    ConditionsComponent
   ],
   imports: [
     CommonModule,
-    GdprRoutingModule,
+    ConditionsRoutingModule,
     ContainerModule
   ]
 })
-export class GdprModule { }
+export class ConditionsModule { }

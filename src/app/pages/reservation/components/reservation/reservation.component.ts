@@ -23,11 +23,6 @@ export class ReservationComponent implements OnInit, OnDestroy {
     parent:             new FormControl(null, Validators.required),
     email:              new FormControl(null, [Validators.required, Validators.email]),
     phone:              new FormControl(null, Validators.required),
-    city:               new FormControl(null, Validators.required),
-    postal_code:        new FormControl(null, Validators.required),
-    street:             new FormControl(null, Validators.required),
-    insurance:          new FormControl(null, Validators.required),
-    pid_number:         new FormControl(null, Validators.required),
     company:            new FormControl(),
     tin:                new FormControl(),
     vat:                new FormControl(),
@@ -50,6 +45,13 @@ export class ReservationComponent implements OnInit, OnDestroy {
       )
       .subscribe((value: Training) => {
         this.training = value;
+
+        this.form.reset();
+
+        if (value.type === 2) {
+          this.form.addControl('insurance', new FormControl(null, Validators.required));
+          this.form.addControl('pid_number', new FormControl(null, Validators.required));
+        }
 
         this.form.patchValue({
           training_id: value.id

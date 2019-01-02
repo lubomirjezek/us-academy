@@ -8,6 +8,7 @@
           <ui-input
             type="text"
             placeholder="Jméno a příjmení"
+            additionalPlaceholder="účastníka"
             [control]="form.controls.name"
           ></ui-input>
         </ui-col>
@@ -36,33 +37,8 @@
           ></ui-input>
         </ui-col>
       </ui-row>
-      <ui-row>
-        <ui-col>
-          <ui-input
-            type="text"
-            placeholder="Město"
-            [control]="form.controls.city"
-          ></ui-input>
-        </ui-col>
-        <ui-col>
-          <ui-input
-            type="text"
-            placeholder="PSČ"
-            [control]="form.controls.postal_code"
-          ></ui-input>
-        </ui-col>
-      </ui-row>
-      <ui-row>
-        <ui-col>
-          <ui-input
-            type="text"
-            placeholder="Ulice a č.p."
-            [control]="form.controls.street"
-          ></ui-input>
-        </ui-col>
-        <ui-col></ui-col>
-      </ui-row>
-      <ui-row>
+
+      <ui-row *ngIf="training?.type === 2">
         <ui-col>
           <ui-input
             type="text"
@@ -78,22 +54,25 @@
           ></ui-input>
         </ui-col>
       </ui-row>
+
+
       <ui-row>
         <ui-col>
           <ui-input
             type="text"
-            placeholder="Firma"
+            placeholder="Jméno a příjmení / Firma"
             additionalPlaceholder="volitelné"
             [control]="form.controls.company"
           ></ui-input>
         </ui-col>
         <ui-col></ui-col>
       </ui-row>
+
       <ui-row>
         <ui-col>
           <ui-input
             type="text"
-            placeholder="IČ"
+            placeholder="IČO"
             additionalPlaceholder="volitelné"
             [control]="form.controls.tin"
           ></ui-input>
@@ -107,6 +86,9 @@
           ></ui-input>
         </ui-col>
       </ui-row>
+
+
+
       <ui-row>
         <ui-col>
           <ui-input

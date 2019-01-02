@@ -5,10 +5,16 @@
     <ui-col class="ui-col--form">
       <ui-row>
         <ui-col>
+          <h2 class="reservation__subheadline reservation__subheadline--no-margin">Základní údaje</h2>
+        </ui-col>
+      </ui-row>
+      <ui-row>
+        <ui-col>
           <ui-input
             type="text"
             placeholder="Jméno a příjmení"
             additionalPlaceholder="účastníka"
+            [errors]="errors.name"
             [control]="form.controls.name"
           ></ui-input>
         </ui-col>
@@ -17,6 +23,7 @@
             type="text"
             placeholder="Jméno a příjmení"
             additionalPlaceholder="zákonného zástupce"
+            [errors]="errors.parent"
             [control]="form.controls.parent"
           ></ui-input>
         </ui-col>
@@ -26,6 +33,7 @@
           <ui-input
             type="text"
             placeholder="E-mail"
+            [errors]="errors.email"
             [control]="form.controls.email"
           ></ui-input>
         </ui-col>
@@ -33,6 +41,7 @@
           <ui-input
             type="text"
             placeholder="Telefon"
+            [errors]="errors.phone"
             [control]="form.controls.phone"
           ></ui-input>
         </ui-col>
@@ -43,6 +52,7 @@
           <ui-input
             type="text"
             placeholder="Pojišťovna"
+            [errors]="errors.insurance"
             [control]="form.controls.insurance"
           ></ui-input>
         </ui-col>
@@ -50,44 +60,11 @@
           <ui-input
             type="text"
             placeholder="Rodné číslo účastníka"
+            [errors]="errors.pid_number"
             [control]="form.controls.pid_number"
           ></ui-input>
         </ui-col>
       </ui-row>
-
-
-      <ui-row>
-        <ui-col>
-          <ui-input
-            type="text"
-            placeholder="Jméno a příjmení / Firma"
-            additionalPlaceholder="volitelné"
-            [control]="form.controls.company"
-          ></ui-input>
-        </ui-col>
-        <ui-col></ui-col>
-      </ui-row>
-
-      <ui-row>
-        <ui-col>
-          <ui-input
-            type="text"
-            placeholder="IČO"
-            additionalPlaceholder="volitelné"
-            [control]="form.controls.tin"
-          ></ui-input>
-        </ui-col>
-        <ui-col>
-          <ui-input
-            type="text"
-            placeholder="DIČ"
-            additionalPlaceholder="volitelné"
-            [control]="form.controls.vat"
-          ></ui-input>
-        </ui-col>
-      </ui-row>
-
-
 
       <ui-row>
         <ui-col>
@@ -104,8 +81,64 @@
           <ui-input
             type="textarea"
             placeholder="Poznámka"
-            additionalPlaceholder="volitelné"
+            realPlaceholder="Odkud jste se dozvěděli o Urban Sense Academy? Co očekáváte od tréninku? Jaké jsou Vaše zkušenosti s parkourem?"
             [control]="form.controls.text"
+          ></ui-input>
+        </ui-col>
+      </ui-row>
+
+      <ui-row>
+        <ui-col>
+          <h2 class="reservation__subheadline">Fakturační údaje</h2>
+        </ui-col>
+      </ui-row>
+      <ui-row>
+        <ui-col>
+          <ui-input
+            type="text"
+            placeholder="Jméno a příjmení / Firma"
+            [control]="form.controls.company"
+          ></ui-input>
+        </ui-col>
+        <ui-col>
+          <ui-input
+            type="text"
+            placeholder="Ulice a číslo popisné"
+            [control]="form.controls.street"
+          ></ui-input>
+        </ui-col>
+      </ui-row>
+
+      <ui-row>
+        <ui-col>
+          <ui-input
+            type="text"
+            placeholder="Město"
+            [control]="form.controls.city"
+          ></ui-input>
+        </ui-col>
+        <ui-col>
+          <ui-input
+            type="text"
+            placeholder="PSČ"
+            [control]="form.controls.postal_code"
+          ></ui-input>
+        </ui-col>
+      </ui-row>
+
+      <ui-row>
+        <ui-col>
+          <ui-input
+            type="text"
+            placeholder="IČO"
+            [control]="form.controls.tin"
+          ></ui-input>
+        </ui-col>
+        <ui-col>
+          <ui-input
+            type="text"
+            placeholder="DIČ"
+            [control]="form.controls.vat"
           ></ui-input>
         </ui-col>
       </ui-row>

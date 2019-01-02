@@ -43,7 +43,7 @@ export class ReservationEffects {
     .pipe(
       ofType(POST_RESERVATION_SUCCESS),
       tap(() => {
-        this.modalService.open(ReservationSuccessModalComponent, { width: '400px', height: '300px' });
+        this.modalService.open(ReservationSuccessModalComponent, { width: '960px', height: '340px' });
       }),
     );
 }

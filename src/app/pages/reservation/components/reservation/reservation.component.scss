@@ -45,3 +45,12 @@
     text-decoration: none;
   }
 }
+
+.reservation__subheadline {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.reservation__subheadline--no-margin {
+  margin-top: 0;
+}

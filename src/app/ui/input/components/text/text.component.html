@@ -15,6 +15,7 @@
     [type]="type"
     (focus)="onFocus()"
     (blur)="onBlur()"
+    [placeholder]="realPlaceholder"
   >
   <textarea
     *ngIf="type === 'textarea'"
@@ -22,5 +23,9 @@
     [formControl]="control"
     (focus)="onFocus()"
     (blur)="onBlur()"
+    [placeholder]="realPlaceholder"
   ></textarea>
+</div>
+<div class="ui-input__error" *ngIf="hasErrors()">
+  {{ getFirstValidatorError() }}
 </div>

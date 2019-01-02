@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'ui-input[type=text], ui-input[type=password], ui-input[type=textarea]',
@@ -18,6 +18,8 @@ export class TextComponent implements OnInit {
   @Input() control: FormControl;
   @Input() placeholder: string;
   @Input() additionalPlaceholder: string;
+  @Input() realPlaceholder = '';
+  @Input() errors: string | ValidationErrors;
 
   isFocused: boolean;
 
@@ -33,12 +35,26 @@ export class TextComponent implements OnInit {
     return !!this.additionalPlaceholder;
   }
 
+  hasErrors(): boolean {
+    return this.control.dirty && this.control.invalid;
+  }
+
   onFocus(): void {
     this.isFocused = true;
   }
 
   onBlur(): void {
     this.isFocused = false;
+  }
+
+  getFirstValidatorError(): string {
+    if (typeof this.errors === 'string') {
+      return this.errors;
+    }
+
+    const keys = Object.keys(this.control.errors);
+
+    return this.errors && this.errors.hasOwnProperty(keys[0]) ? this.errors[keys[0]] : '';
   }
 
 }

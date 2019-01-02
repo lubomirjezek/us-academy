@@ -7,6 +7,8 @@ import { Training } from '../../../../models/training';
 import { selectDetail } from '../../../detail/reducers/detail.reducer';
 import { filter, takeUntil } from 'rxjs/operators';
 import { PostReservation } from '../../actions/reservation.actions';
+import { ReservationSuccessModalComponent } from '../reservation-success-modal/reservation-success-modal.component';
+import { ModalService } from '../../../../ui/modal/services/modal.service';
 
 @Component({
   selector: 'usacademy-reservation',
@@ -23,17 +25,42 @@ export class ReservationComponent implements OnInit, OnDestroy {
     parent:             new FormControl(null, Validators.required),
     email:              new FormControl(null, [Validators.required, Validators.email]),
     phone:              new FormControl(null, Validators.required),
-    company:            new FormControl(),
-    tin:                new FormControl(),
-    vat:                new FormControl(),
     condition:          new FormControl(),
-    text:               new FormControl(),
+    text:               new FormControl(null, Validators.required),
+    company:            new FormControl(null, Validators.required),
+    street:             new FormControl(null, Validators.required),
+    city:               new FormControl(null, Validators.required),
+    postal_code:        new FormControl(null, Validators.required),
+    tin:                new FormControl(null, Validators.required),
+    vat:                new FormControl(null, Validators.required),
     gdpr_consent:       new FormControl(false, Validators.requiredTrue),
     conditions_consent: new FormControl(false, Validators.requiredTrue)
   });
+  errors: { [key: string]: { [key: string]: string } } = {
+    name: {
+      required: 'Zadejte jméno a příjmení účastníka.',
+    },
+    parent: {
+      required: 'Zadejte jméno a příjmení zákonného zástupce účastníka.',
+    },
+    email: {
+      required: 'Zadejte e-mailovou adresu přes kterou Vás budete kontaktovat.',
+      email: 'Zadejte validní e-mailovou adresu.'
+    },
+    phone: {
+      required: 'Zadejte svoje telefonní číslo přes které Vás můžeme kontaktovat.',
+    },
+    insurance: {
+      required: 'Zadejte název zdravotní pojišťovny u které je účastník registrovaný,',
+    },
+    pid_number: {
+      required: 'Zadejte rodné číslo účastníka.',
+    },
+  };
 
   constructor(
-    private store: Store<any>
+    private store: Store<any>,
+    private modalService: ModalService
   ) { }
 
   ngOnInit() {

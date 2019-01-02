@@ -16,6 +16,7 @@ import { ListModule } from '../../ui/list/list.module';
 import { ReservationEffects } from './effects/reservation.effects';
 import { ModalModule } from '../../ui/modal/modal.module';
 import { ReservationSuccessModalComponent } from './components/reservation-success-modal/reservation-success-modal.component';
+import { IconModule } from '../../ui/icon/icon.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ReservationSuccessModalComponent } from './components/reservation-succe
     EffectsModule.forFeature([
       ReservationEffects
     ]),
-    RouterModule
+    RouterModule,
+    IconModule
   ],
   entryComponents: [
     ReservationSuccessModalComponent

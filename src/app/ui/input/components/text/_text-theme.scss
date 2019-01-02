@@ -4,6 +4,7 @@
   $text-primary:     map-get($theme, text-primary);
   $text-secondary:   map-get($theme, text-alternative);
   $color-primary:    map-get($theme, color-secondary);
+  $toast-error:      map-get($theme, toast-error);
 
   .ui-input__element {
     border: 0.1rem solid $text-primary;
@@ -22,5 +23,9 @@
 
   .ui-input__placeholder--additional {
     color: $text-secondary;
+  }
+
+  .ui-input__error {
+    color: $toast-error;
   }
 }

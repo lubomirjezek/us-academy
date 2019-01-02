@@ -32,7 +32,7 @@ export class ReservationComponent implements OnInit, OnDestroy {
     city:               new FormControl(null, Validators.required),
     postal_code:        new FormControl(null, Validators.required),
     tin:                new FormControl(null, Validators.required),
-    vat:                new FormControl(null, Validators.required),
+    vat:                new FormControl(),
     gdpr_consent:       new FormControl(false, Validators.requiredTrue),
     conditions_consent: new FormControl(false, Validators.requiredTrue)
   });

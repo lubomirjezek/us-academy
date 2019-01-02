@@ -18,21 +18,23 @@ export class ReservationComponent implements OnInit, OnDestroy {
 
   training: Training;
   form: FormGroup = new FormGroup({
-    training_id: new FormControl(null, Validators.required),
-    name:        new FormControl(null, Validators.required),
-    parent:      new FormControl(null, Validators.required),
-    email:       new FormControl(null, [Validators.required, Validators.email]),
-    phone:       new FormControl(null, Validators.required),
-    city:        new FormControl(null, Validators.required),
-    postal_code: new FormControl(null, Validators.required),
-    street:      new FormControl(null, Validators.required),
-    insurance:   new FormControl(null, Validators.required),
-    pid_number:  new FormControl(null, Validators.required),
-    company:     new FormControl(),
-    tin:         new FormControl(),
-    vat:         new FormControl(),
-    condition:   new FormControl(),
-    text:        new FormControl()
+    training_id:        new FormControl(null, Validators.required),
+    name:               new FormControl(null, Validators.required),
+    parent:             new FormControl(null, Validators.required),
+    email:              new FormControl(null, [Validators.required, Validators.email]),
+    phone:              new FormControl(null, Validators.required),
+    city:               new FormControl(null, Validators.required),
+    postal_code:        new FormControl(null, Validators.required),
+    street:             new FormControl(null, Validators.required),
+    insurance:          new FormControl(null, Validators.required),
+    pid_number:         new FormControl(null, Validators.required),
+    company:            new FormControl(),
+    tin:                new FormControl(),
+    vat:                new FormControl(),
+    condition:          new FormControl(),
+    text:               new FormControl(),
+    gdpr_consent:       new FormControl(false, Validators.requiredTrue),
+    conditions_consent: new FormControl(false, Validators.requiredTrue)
   });
 
   constructor(

@@ -133,6 +133,26 @@
     </ui-col>
   </ui-row>
   <ui-row>
+    <ui-col>
+      <ui-input
+        type="checkbox"
+        [control]="form.controls.gdpr_consent"
+      >
+        Souhlasím se <a class="reservation__link" target="_blank" [routerLink]="['/', 'gdpr']">zpracováním osobních údajů</a>
+      </ui-input>
+    </ui-col>
+  </ui-row>
+  <ui-row>
+    <ui-col>
+      <ui-input
+        type="checkbox"
+        [control]="form.controls.conditions_consent"
+      >
+        Souhlasím s <a class="reservation__link" target="_blank" [routerLink]="['/', 'podminky']">podmínkami Urban Sense Academy</a>
+      </ui-input>
+    </ui-col>
+  </ui-row>
+  <ui-row>
     <ui-col horizontal-center>
       <button ui-button="positive" [disabled]="form.invalid || form.pristine" (click)="postReservation()">
         Odeslat rezervaci

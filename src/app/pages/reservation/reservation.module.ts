@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { RouterModule } from '@angular/router';
 
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { ReservationRoutingModule } from './reservation-routing.module';
@@ -35,7 +36,8 @@ import { ReservationSuccessModalComponent } from './components/reservation-succe
     ModalModule,
     EffectsModule.forFeature([
       ReservationEffects
-    ])
+    ]),
+    RouterModule
   ],
   entryComponents: [
     ReservationSuccessModalComponent

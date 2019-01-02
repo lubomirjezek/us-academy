@@ -25,6 +25,7 @@ export class TrainingsListComponent implements OnInit {
 
   @Input() pin: Pin;
   @Input() trainings: Training[];
+  @Input() advanced: boolean;
 
   constructor() { }
 

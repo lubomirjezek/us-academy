@@ -36,5 +36,5 @@
 </ng-container>
 
 <ng-template #empty>
-  <p>Momentálně nejsou naplánované žádné kroužky ve Vašem městě.</p>
+  <p>Momentálně nejsou naplánované žádné kroužky <ng-container *ngIf="advanced">pro pokročilé</ng-container> ve Vašem městě.</p>
 </ng-template>

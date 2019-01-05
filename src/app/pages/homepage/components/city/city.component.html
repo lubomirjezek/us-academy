@@ -1,6 +1,12 @@
 <div class="city" *ngIf="city?.loaded">
   <usacademy-container>
 
+    <ui-row>
+      <ui-col>
+        <h1>{{ city?.data?.parent?.name }}</h1>
+      </ui-col>
+    </ui-row>
+
     <ui-row class="section-select">
       <ui-col class="section-select__col section-select__col--trainings" vertical-center>
         <button class="section-select__button" (click)="selectActiveSection(0)" [ui-button]="activeSection === 0 ? 'negative' : 'none'">

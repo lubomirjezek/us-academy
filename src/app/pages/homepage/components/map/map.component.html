@@ -4,13 +4,6 @@
     <img class="map__img" src="assets/map.png" alt="Česká republika">
 
     <ng-container *ngFor="let pin of pins">
-<!--      <usacademy-pin
-        class="map__pin"
-        [x]="pin.x"
-        [y]="pin.y"
-        (click)="selectCity(pin.id)"
-        [uiTooltip]="template"
-      ></usacademy-pin>-->
       <ui-icon
         class="map__pin"
         [style.left.%]="pin.x"

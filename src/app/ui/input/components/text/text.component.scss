@@ -4,7 +4,9 @@
 }
 
 .ui-input__element {
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
   padding: 1.5rem;
   outline: none;
 }
@@ -21,7 +23,9 @@
 
 .ui-input__placeholder-wrapper {
   margin: 2rem 0 1rem 0;
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
 }
 
 .ui-input__placeholder {

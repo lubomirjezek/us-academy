@@ -34,7 +34,9 @@
 
 .header__col--navigation {
   display: none;
-  flex: 2;
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 0;
 
   @media (min-width: $breakpoint-l) {
     display: flex;
@@ -43,7 +45,9 @@
 }
 
 .header__col--logo {
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
   align-items: flex-end;
   justify-content: flex-start;
 
@@ -53,7 +57,9 @@
 }
 
 .header__col--social-medias {
-  flex: 2;
+  flex-grow: 2;
+  flex-shrink: 2;
+  flex-basis: 0;
   justify-content: flex-end;
 }
 

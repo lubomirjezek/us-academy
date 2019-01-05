@@ -46,7 +46,9 @@
 }
 
 .about-us__list-item {
-  flex: 0 0 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
   text-transform: uppercase;
   font-family: map-get($theme, font-secondary);
   font-weight: map-get($theme, font-weight-bold);
@@ -64,7 +66,9 @@
   }
 
   @media (min-width: $breakpoint-xs) {
-    flex: 0 0 calc(50% - 2.5rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(50% - 2.5rem);
     margin-left: 2.5rem;
   }
 }

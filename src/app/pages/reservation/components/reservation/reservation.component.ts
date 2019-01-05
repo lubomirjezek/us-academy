@@ -7,8 +7,8 @@ import { Training } from '../../../../models/training';
 import { selectDetail } from '../../../detail/reducers/detail.reducer';
 import { filter, takeUntil } from 'rxjs/operators';
 import { PostReservation } from '../../actions/reservation.actions';
-import { ReservationSuccessModalComponent } from '../reservation-success-modal/reservation-success-modal.component';
-import { ModalService } from '../../../../ui/modal/services/modal.service';
+import { GetDetail } from '../../../detail/actions/detail.actions';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'usacademy-reservation',
@@ -60,7 +60,7 @@ export class ReservationComponent implements OnInit, OnDestroy {
 
   constructor(
     private store: Store<any>,
-    private modalService: ModalService
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -84,6 +84,10 @@ export class ReservationComponent implements OnInit, OnDestroy {
           training_id: value.id
         });
       });
+
+    if (this.activatedRoute.snapshot.params.hasOwnProperty('training')) {
+      this.fetchDetail(this.activatedRoute.snapshot.params.training);
+    }
   }
 
   ngOnDestroy() {
@@ -93,6 +97,12 @@ export class ReservationComponent implements OnInit, OnDestroy {
   postReservation(): void {
     this.store.dispatch(new PostReservation(this.form.value));
     this.form.reset();
+  }
+
+  fetchDetail(id: string): void {
+    this.store.dispatch(new GetDetail({
+      id: id
+    }));
   }
 
 }

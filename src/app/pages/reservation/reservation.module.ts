@@ -17,6 +17,7 @@ import { ReservationEffects } from './effects/reservation.effects';
 import { ModalModule } from '../../ui/modal/modal.module';
 import { ReservationSuccessModalComponent } from './components/reservation-success-modal/reservation-success-modal.component';
 import { IconModule } from '../../ui/icon/icon.module';
+import { DetailModule } from '../detail/detail.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { IconModule } from '../../ui/icon/icon.module';
       ReservationEffects
     ]),
     RouterModule,
-    IconModule
+    IconModule,
+    DetailModule
   ],
   entryComponents: [
     ReservationSuccessModalComponent

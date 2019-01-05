@@ -1,12 +1,12 @@
 .ui-input__wrapper {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
 }
 
 .ui-input__element {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
   padding: 1.5rem;
   outline: none;
 }
@@ -23,9 +23,9 @@
 
 .ui-input__placeholder-wrapper {
   margin: 2rem 0 1rem 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
 }
 
 .ui-input__placeholder {

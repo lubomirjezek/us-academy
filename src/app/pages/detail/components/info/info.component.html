@@ -1,5 +1,5 @@
 <usacademy-slide class="slide" [style.background-image]="getBackground()">
-  <div class="info">
+  <div class="info" *ngIf="training">
     <usacademy-container>
       <h1 class="info__city">{{ training?.city?.name }}</h1>
       <h2 class="info__type">{{ training?.type | trainingTypeToString }}</h2>

@@ -84,12 +84,17 @@
     flex-shrink: 1;
     flex-basis: 0;
     text-align: left;
-    padding: 3rem;
+    padding: 1rem;
     font-weight: map-get($theme, font-weight-normal);
     display: flex;
     align-items: center;
-    min-width: 15rem;
+    min-width: 9rem;
     border-bottom: 0.1rem solid map-get($theme, line-secondary);
+
+    @media (min-width: $breakpoint-xs) {
+      padding: 3rem;
+      min-width: 15rem;
+    }
   }
 
   .table__th {
@@ -103,10 +108,6 @@
 
   .table__td--price { }
 
-  .table__td--city {
-    text-transform: uppercase;
-  }
-
   .table__td--signed { }
 
   .table__td--date { }
@@ -116,5 +117,14 @@
   .table__td--actions {
     display: flex;
     justify-content: flex-end;
+  }
+
+  .table__th--price,
+  .table__td--price {
+    display: none;
+
+    @media (min-width: $breakpoint-xs) {
+      display: flex;
+    }
   }
 }

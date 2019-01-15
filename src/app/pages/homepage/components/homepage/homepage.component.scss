@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  background: map-get($theme, background-primary) url("../../../../../assets/bg.jpg") no-repeat top center;
+  background: map-get($theme, background-primary) url("../../../../../assets/bg.jpg") no-repeat 20% center;
   background-attachment: fixed;
   background-size: cover;
 }

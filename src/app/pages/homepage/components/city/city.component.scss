@@ -108,7 +108,9 @@
 
   .table__td--price { }
 
-  .table__td--signed { }
+  .table__td--signed {
+    text-transform: uppercase;
+  }
 
   .table__td--date { }
 

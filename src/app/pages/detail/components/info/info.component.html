@@ -11,7 +11,7 @@
           <span class="info__price">{{ training?.price }},-</span>
         </ui-col>
         <ui-col class="info__col--signed" vertical-center>
-          <span class="info__signed">{{ training?.paid }}/{{ training?.capacity }}</span>
+          <span class="info__signed">{{ [training?.paid, training?.capacity] | occupancy }}</span>
         </ui-col>
         <ui-col class="info__col--actions" vertical-center>
           <a [routerLink]="['/', 'rezervace', training?.id]" ui-button="positive">

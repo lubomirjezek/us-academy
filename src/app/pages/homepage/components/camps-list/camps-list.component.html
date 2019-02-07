@@ -11,7 +11,7 @@
         {{ camp.date }} - {{ camp.date_to }}
       </div>
       <div class="table__td table__td--signed">
-        {{ camp.paid }}/{{ camp.capacity }}
+        {{ [camp.paid, camp.capacity] | occupancy }}
       </div>
       <div class="table__td table__td--price">
         {{ camp.price }},-

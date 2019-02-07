@@ -15,7 +15,7 @@
         {{ workshop.time }}
       </div>
       <div class="table__td table__td--signed">
-        {{ workshop.paid }}/{{ workshop.capacity }}
+        {{ [workshop.paid, workshop.capacity] | occupancy }}
       </div>
       <div class="table__td table__td--price">
         {{ workshop.price }},-

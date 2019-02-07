@@ -27,6 +27,7 @@ import { TrainingsComponent } from './components/trainings/trainings.component';
 import { TrainingsListComponent } from './components/trainings-list/trainings-list.component';
 import { CampsListComponent } from './components/camps-list/camps-list.component';
 import { WorkshopsListComponent } from './components/workshops-list/workshops-list.component';
+import { PipesModule } from '../../modules/pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { WorkshopsListComponent } from './components/workshops-list/workshops-li
     TooltipModule,
     GridModule,
     ScrollToModule,
-    IconModule
+    IconModule,
+    PipesModule
   ]
 })
 export class HomepageModule { }

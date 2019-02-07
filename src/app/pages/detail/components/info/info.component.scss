@@ -71,6 +71,7 @@
 }
 
 .info__col--signed {
+  text-transform: uppercase;
   justify-content: flex-end;
 
   @media (min-width: $breakpoint-xs) {

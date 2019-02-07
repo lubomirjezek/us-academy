@@ -19,7 +19,7 @@
         {{ training.time }}
       </div>
       <div class="table__td table__td--signed">
-        {{ training.paid }}/{{ training.capacity }}
+          {{ [training.paid, training.capacity] | occupancy }}
       </div>
       <div class="table__td table__td--price">
         {{ training.price }},-

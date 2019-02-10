@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef, ViewEncapsulation } from '@angular/core';
 import { FormControl, ValidationErrors } from '@angular/forms';
 
 @Component({
@@ -16,7 +16,7 @@ export class TextComponent implements OnInit {
 
   @Input() type: string;
   @Input() control: FormControl;
-  @Input() placeholder: string;
+  @Input() placeholder: string | TemplateRef<any>;
   @Input() additionalPlaceholder: string;
   @Input() realPlaceholder = '';
   @Input() errors: string | ValidationErrors;
@@ -57,4 +57,7 @@ export class TextComponent implements OnInit {
     return this.errors && this.errors.hasOwnProperty(keys[0]) ? this.errors[keys[0]] : '';
   }
 
+  isPlaceholderText(): boolean {
+    return typeof this.placeholder === 'string';
+  }
 }

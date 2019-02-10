@@ -18,6 +18,7 @@ import { ModalModule } from '../../ui/modal/modal.module';
 import { ReservationSuccessModalComponent } from './components/reservation-success-modal/reservation-success-modal.component';
 import { IconModule } from '../../ui/icon/icon.module';
 import { DetailModule } from '../detail/detail.module';
+import { TooltipModule } from '../../ui/tooltip/tooltip.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { DetailModule } from '../detail/detail.module';
     ]),
     RouterModule,
     IconModule,
-    DetailModule
+    DetailModule,
+    TooltipModule
   ],
   entryComponents: [
     ReservationSuccessModalComponent

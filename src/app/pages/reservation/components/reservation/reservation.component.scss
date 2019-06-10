@@ -76,7 +76,7 @@
 }
 
 .reservation__input--company {
-  /deep/ .ui-input__placeholder {
+  &::ng-deep .ui-input__placeholder {
     display: flex;
     justify-content: space-between;
   }

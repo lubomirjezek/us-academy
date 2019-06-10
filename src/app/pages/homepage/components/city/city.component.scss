@@ -54,7 +54,7 @@
   margin-bottom: 0.5rem;
 }
 
-:host /deep/ {
+:host::ng-deep {
   .table {
     border-collapse: collapse;
     overflow-x: auto;

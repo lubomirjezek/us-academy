@@ -27,7 +27,7 @@
   font-size: 2.5rem;
   color: inherit;
 
-  /deep/ .scrolled & {
+  &::ng-deep .scrolled & {
     font-size: 2.2rem;
   }
 }

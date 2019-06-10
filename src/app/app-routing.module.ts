@@ -4,19 +4,19 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './pages/homepage/homepage.module#HomepageModule'
+    loadChildren: () => import('./pages/homepage/homepage.module').then(m => m.HomepageModule)
   }, {
     path: 'gdpr',
-    loadChildren: './pages/gdpr/gdpr.module#GdprModule'
+    loadChildren: () => import('./pages/gdpr/gdpr.module').then(m => m.GdprModule)
   }, {
     path: 'podminky',
-    loadChildren: './pages/conditions/conditions.module#ConditionsModule'
+    loadChildren: () => import('./pages/conditions/conditions.module').then(m => m.ConditionsModule)
   }, {
     path: 'rezervace',
-    loadChildren: './pages/reservation/reservation.module#ReservationModule'
+    loadChildren: () => import('./pages/reservation/reservation.module').then(m => m.ReservationModule)
   }, {
     path: ':city',
-    loadChildren: './pages/detail/detail.module#DetailModule'
+    loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule)
   }
 ];
 

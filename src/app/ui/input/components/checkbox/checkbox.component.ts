@@ -36,7 +36,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
 
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
-    @Optional() @Inject(forwardRef(() => CheckboxGroupComponent)) private checkboxGroup: CheckboxGroupComponent
+    // @Optional() @Inject(forwardRef(() => CheckboxGroupComponent)) private checkboxGroup: CheckboxGroupComponent
   ) { }
 
   ngOnInit() {
@@ -59,14 +59,12 @@ export class CheckboxComponent implements OnInit, OnChanges {
         this.control.setValue(this.checked);
       }
 
-      if (this.checkboxGroup) {
+/*      if (this.checkboxGroup) {
         this.checkboxGroup.markAsDirty();
         this.checkboxGroup.markAsTouched();
         this.checkboxGroup.value = this.value;
-      }
+      }*/
     }
-
-    console.log(this.checked);
   }
 
   isDisabled(): boolean {
@@ -74,7 +72,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
   }
 
   updateChecked(): void {
-    if (this.checkboxGroup) {
+/*    if (this.checkboxGroup) {
       if (Array.isArray(this.checkboxGroup.value)) {
         this.checked = this.checkboxGroup
           .value
@@ -82,7 +80,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
       } else {
         this.checked = this.checkboxGroup.value === this.value;
       }
-    } else if (this.control) {
+    } else */if (this.control) {
       this.checked = this.control.value === this.value;
     }
   }
@@ -101,7 +99,7 @@ export class CheckboxComponent implements OnInit, OnChanges {
 export class CheckboxGroupComponent implements OnInit, OnDestroy, OnChanges {
   destroy: Subject<null> = new Subject<null>();
 
-  @ContentChildren(CheckboxComponent, { descendants: true }) checkboxes: QueryList<CheckboxComponent>;
+  @ContentChildren(CheckboxComponent, { descendants: true }) checkboxes !: QueryList<CheckboxComponent>;
 
   @Input() control: FormControl;
 

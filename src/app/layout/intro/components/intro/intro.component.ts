@@ -4,7 +4,7 @@ import { transition, trigger, useAnimation } from '@angular/animations';
 import { fade } from '../../../../animations/fade.animation';
 
 @Component({
-  selector: 'usacademy-intro',
+  selector: 'parkouracademy-intro',
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss'],
   animations: [

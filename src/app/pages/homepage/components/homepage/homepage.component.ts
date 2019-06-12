@@ -10,7 +10,7 @@ import { City } from '../../../../models/city';
 import { StoreData } from '../../../../models/store-data';
 
 @Component({
-  selector: 'usacademy-homepage',
+  selector: 'parkouracademy-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],
   animations: [

@@ -7,7 +7,7 @@ import { fadeInStagger } from '../../../../animations/fade-in-stagger.animation'
 import { StoreData } from '../../../../models/store-data';
 
 @Component({
-  selector: 'usacademy-city',
+  selector: 'parkouracademy-city',
   templateUrl: './city.component.html',
   styleUrls: ['./city.component.scss']
 })

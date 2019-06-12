@@ -5,7 +5,7 @@ import { Pin } from '../../../../models/pin';
 import { GetCity } from '../../actions/homepage.actions';
 
 @Component({
-  selector: 'usacademy-map',
+  selector: 'parkouracademy-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })

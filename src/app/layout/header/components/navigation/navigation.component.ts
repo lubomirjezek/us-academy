@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Link } from '../../../../models/link';
 
 @Component({
-  selector: 'usacademy-navigation',
+  selector: 'parkouracademy-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })

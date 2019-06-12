@@ -1,5 +1,5 @@
 <div class="city" *ngIf="city?.loaded">
-  <usacademy-container>
+  <parkouracademy-container>
 
     <ui-row>
       <ui-col>
@@ -25,34 +25,34 @@
       </ui-col>
     </ui-row>
 
-    <usacademy-trainings
+    <parkouracademy-trainings
       *ngIf="activeSection === 0"
       [beginners]="city?.data?.trainings_beginners"
       [advanced]="city?.data?.trainings_advanced"
       [pin]="city?.data?.parent"
-    ></usacademy-trainings>
+    ></parkouracademy-trainings>
 
-    <usacademy-workshops-list
+    <parkouracademy-workshops-list
       *ngIf="activeSection === 1"
       [workshops]="city?.data?.workshops"
       [pin]="city?.data?.parent"
-    ></usacademy-workshops-list>
+    ></parkouracademy-workshops-list>
 
-    <usacademy-camps-list
+    <parkouracademy-camps-list
       *ngIf="activeSection === 2"
       [camps]="city?.data?.camps"
       [pin]="city?.data?.parent"
-    ></usacademy-camps-list>
+    ></parkouracademy-camps-list>
 
-  </usacademy-container>
+  </parkouracademy-container>
 </div>
 
 <div class="city" *ngIf="city?.loading">
-  <usacademy-container>
+  <parkouracademy-container>
     <ui-greybox [height]="'82px'"></ui-greybox>
     <ui-greybox [height]="'108px'"></ui-greybox>
     <ui-greybox [height]="'108px'"></ui-greybox>
     <ui-greybox [height]="'108px'"></ui-greybox>
     <ui-greybox [height]="'108px'"></ui-greybox>
-  </usacademy-container>
+  </parkouracademy-container>
 </div>

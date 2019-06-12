@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'usacademy-container',
+  selector: 'parkouracademy-container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.scss']
 })

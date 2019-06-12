@@ -6,7 +6,7 @@ import { takeUntil } from 'rxjs/operators';
 import { fade } from '../../../../animations/fade.animation';
 
 @Component({
-  selector: 'usacademy-welcome',
+  selector: 'parkouracademy-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
   animations: [

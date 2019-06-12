@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalService } from '../../../../ui/modal/services/modal.service';
 
 @Component({
-  selector: 'usacademy-reservation-success-modal',
+  selector: 'parkouracademy-reservation-success-modal',
   templateUrl: './reservation-success-modal.component.html',
   styleUrls: ['./reservation-success-modal.component.scss']
 })

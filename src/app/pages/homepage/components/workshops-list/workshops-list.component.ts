@@ -5,7 +5,7 @@ import { Training } from '../../../../models/training';
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'usacademy-workshops-list',
+  selector: 'parkouracademy-workshops-list',
   templateUrl: './workshops-list.component.html',
   styleUrls: ['./workshops-list.component.scss'],
   animations: [

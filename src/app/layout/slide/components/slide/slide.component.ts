@@ -3,7 +3,7 @@ import { Component, HostBinding, HostListener, Inject, OnInit } from '@angular/c
 import { DOCUMENT } from '../../../../app.config';
 
 @Component({
-  selector: 'usacademy-slide',
+  selector: 'parkouracademy-slide',
   templateUrl: './slide.component.html',
   styleUrls: ['./slide.component.scss']
 })

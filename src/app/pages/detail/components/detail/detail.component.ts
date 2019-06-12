@@ -9,7 +9,7 @@ import { selectDetail } from '../../reducers/detail.reducer';
 import { GetDetail } from '../../actions/detail.actions';
 
 @Component({
-  selector: 'usacademy-detail',
+  selector: 'parkouracademy-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.scss']
 })

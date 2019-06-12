@@ -4,7 +4,7 @@ import { Training } from '../../../../models/training';
 import { Pin } from '../../../../models/pin';
 
 @Component({
-  selector: 'usacademy-trainings',
+  selector: 'parkouracademy-trainings',
   templateUrl: './trainings.component.html',
   styleUrls: ['./trainings.component.scss']
 })

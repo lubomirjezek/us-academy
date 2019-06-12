@@ -1,17 +1,17 @@
-<usacademy-slide class="slide slide--welcome">
-  <usacademy-welcome></usacademy-welcome>
-</usacademy-slide>
+<parkouracademy-slide class="slide slide--welcome">
+  <parkouracademy-welcome></parkouracademy-welcome>
+</parkouracademy-slide>
 
 
 <div id="o-nas"></div>
-<usacademy-slide class="slide about-us--desktop">
-  <usacademy-about-us
-    inViewport (inViewportAction)="onIntersection($event)" [@expandIn]="isVisible"></usacademy-about-us>
-</usacademy-slide>
-<usacademy-about-us class="about-us--mobile"></usacademy-about-us>
+<parkouracademy-slide class="slide about-us--desktop">
+  <parkouracademy-about-us
+    inViewport (inViewportAction)="onIntersection($event)" [@expandIn]="isVisible"></parkouracademy-about-us>
+</parkouracademy-slide>
+<parkouracademy-about-us class="about-us--mobile"></parkouracademy-about-us>
 
-<usacademy-map id="vyber-mest" [pins]="pins | async"></usacademy-map>
+<parkouracademy-map id="vyber-mest" [pins]="pins | async"></parkouracademy-map>
 
-<usacademy-city id="terminy" [city]="city | async"></usacademy-city>
+<parkouracademy-city id="terminy" [city]="city | async"></parkouracademy-city>
 
-<usacademy-contact id="kontakt"></usacademy-contact>
+<parkouracademy-contact id="kontakt"></parkouracademy-contact>

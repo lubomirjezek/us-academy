@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Link } from '../../../../models/link';
 
 @Component({
-  selector: 'usacademy-logo',
+  selector: 'parkouracademy-logo',
   templateUrl: './logo.component.html',
   styleUrls: ['./logo.component.scss']
 })

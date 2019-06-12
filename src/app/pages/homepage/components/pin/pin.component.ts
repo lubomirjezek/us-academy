@@ -1,7 +1,7 @@
 import { Component, HostBinding, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'usacademy-pin',
+  selector: 'parkouracademy-pin',
   templateUrl: './pin.component.html',
   styleUrls: ['./pin.component.scss']
 })

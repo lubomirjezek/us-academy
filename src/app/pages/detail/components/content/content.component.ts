@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Training } from '../../../../models/training';
 
 @Component({
-  selector: 'usacademy-content',
+  selector: 'parkouracademy-content',
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })

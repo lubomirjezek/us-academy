@@ -5,7 +5,7 @@ import { Pin } from '../../../../models/pin';
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
 @Component({
-  selector: 'usacademy-trainings-list',
+  selector: 'parkouracademy-trainings-list',
   templateUrl: './trainings-list.component.html',
   styleUrls: ['./trainings-list.component.scss'],
   animations: [

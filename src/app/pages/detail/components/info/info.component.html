@@ -1,9 +1,9 @@
-<usacademy-slide class="slide" [style.background-image]="getBackground()">
+<parkouracademy-slide class="slide" [style.background-image]="getBackground()">
   <div class="info" *ngIf="training">
-    <usacademy-container>
+    <parkouracademy-container>
       <h1 class="info__city">{{ training?.city?.name }}</h1>
       <h2 class="info__type">{{ training?.type | trainingTypeToString }}</h2>
-    </usacademy-container>
+    </parkouracademy-container>
 
     <div class="info__bar">
       <ui-row class="info__container">
@@ -21,5 +21,5 @@
       </ui-row>
     </div>
   </div>
-</usacademy-slide>
+</parkouracademy-slide>
 

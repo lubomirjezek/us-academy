@@ -11,7 +11,7 @@ import { GetDetail } from '../../../detail/actions/detail.actions';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'usacademy-reservation',
+  selector: 'parkouracademy-reservation',
   templateUrl: './reservation.component.html',
   styleUrls: ['./reservation.component.scss']
 })

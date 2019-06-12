@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { selectNavigation, selectSocialMedias } from '../../reducers/header.reducer';
 
 @Component({
-  selector: 'usacademy-header',
+  selector: 'parkouracademy-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

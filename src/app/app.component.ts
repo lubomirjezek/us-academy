@@ -7,7 +7,7 @@ import { WINDOW } from './app.config';
 import { ViewportScroller } from '@angular/common';
 
 @Component({
-  selector: 'usacademy-root',
+  selector: 'parkouracademy-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

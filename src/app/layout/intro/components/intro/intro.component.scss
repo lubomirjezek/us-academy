@@ -7,11 +7,11 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: map-get($theme, background-primary) url("../../../../../assets/logo.svg") no-repeat center center;
+  background: map-get($theme, background-primary) url("../../../../../assets/pa_logo.svg") no-repeat top center;
   z-index: 11;
-  background-size: 35rem auto;
+  background-size: 50rem auto;
 
   @media (min-width: $breakpoint-xs) {
-    background-size: 46.4rem auto;
+    background-size: 80rem auto;
   }
 }

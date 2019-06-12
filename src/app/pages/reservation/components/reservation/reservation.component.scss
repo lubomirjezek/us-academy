@@ -81,3 +81,14 @@
     justify-content: space-between;
   }
 }
+
+.info-block {
+  padding: 2rem;
+}
+
+.info-block--danger {
+  color: map-get($theme, color-primary);
+  border: 0.2rem solid map-get($theme, color-primary);
+  font-weight: map-get($theme, font-weight-bold);
+}
+

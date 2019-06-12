@@ -95,10 +95,17 @@
       </ui-row>
       <ui-row>
         <ui-col>
+          <div class="info-block info-block--danger">
+            Pro proplacení u vaší pojišťovny, vyplňte fakturační údaje přímo na účastníka (dítě).
+          </div>
+        </ui-col>
+      </ui-row>
+      <ui-row>
+        <ui-col>
           <ui-input
             class="reservation__input reservation__input--company"
             type="text"
-            [placeholder]="companyPlaceholderTemplate"
+            placeholder="Jméno a příjmení / Firma"
             [control]="form.controls.company"
           ></ui-input>
         </ui-col>
@@ -180,14 +187,3 @@
   </ui-row>
 
 </usacademy-container>
-
-<ng-template #companyPlaceholderTemplate>
-  Jméno a příjmení / Firma
-  <ui-icon [uiTooltip]="tooltipTemplate">info</ui-icon>
-</ng-template>
-
-<ng-template #tooltipTemplate>
-  <div class="reservation__tooltip">
-    Pro proplacení u vaší pojišťovny, vyplňte fakturační údaje přímo na účastníka (dítě).
-  </div>
-</ng-template>

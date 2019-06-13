@@ -8,7 +8,7 @@ const routes: Routes = [
     path: '',
     component: ReservationComponent
   }, {
-    path: ':training',
+    path: ':training/:season',
     component: ReservationComponent
   }
 ];

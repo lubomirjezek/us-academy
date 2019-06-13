@@ -18,7 +18,13 @@
         <ui-dt>Čas</ui-dt>
         <ui-dd>{{ training?.time }}</ui-dd>
         <ui-dt>Období</ui-dt>
-        <ui-dd>{{ training?.season }}</ui-dd>
+        <ng-container *ngIf="isFullYear">
+          <ui-dd class="ui-dd--no-space">{{ training?.season }}</ui-dd>
+          <ui-dd >{{ training?.yearly?.season }}</ui-dd>
+        </ng-container>
+        <ng-container *ngIf="!isFullYear">
+          <ui-dd >{{ training?.season }}</ui-dd>
+        </ng-container>
         <ui-dt>Adresa</ui-dt>
         <ui-dd>{{ training?.address }}</ui-dd>
       </ui-dl>

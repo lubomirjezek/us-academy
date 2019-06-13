@@ -7,6 +7,7 @@ import { takeUntil } from 'rxjs/operators';
 import { Training } from '../../../../models/training';
 import { selectDetail } from '../../reducers/detail.reducer';
 import { GetDetail } from '../../actions/detail.actions';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'parkouracademy-detail',
@@ -17,6 +18,7 @@ export class DetailComponent implements OnInit, OnDestroy {
   destroy: Subject<null> = new Subject<null>();
   training: Observable<Training>;
   background: string;
+  isFullYear: FormControl = new FormControl(false);
 
   constructor(
     private store: Store<any>,

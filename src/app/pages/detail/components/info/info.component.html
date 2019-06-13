@@ -14,7 +14,7 @@
           <span class="info__signed">{{ [training?.paid, training?.capacity] | occupancy }}</span>
         </ui-col>
         <ui-col class="info__col--actions" vertical-center>
-          <a [routerLink]="['/', 'rezervace', training?.id]" ui-button="positive">
+          <a [routerLink]="buildReservationLink()" ui-button="positive">
             {{ training?.paid >= training?.capacity ? 'Přihlásit náhradníka' : 'Rezervovat si místo' }}
           </a>
         </ui-col>

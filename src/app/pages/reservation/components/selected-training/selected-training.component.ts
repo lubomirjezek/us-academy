@@ -10,6 +10,7 @@ import { Training } from '../../../../models/training';
 export class SelectedTrainingComponent implements OnInit {
 
   @Input() training: Training;
+  @Input() isFullYear: boolean;
 
   constructor() { }
 

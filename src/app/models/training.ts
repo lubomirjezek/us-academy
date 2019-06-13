@@ -21,4 +21,5 @@ export interface Training {
   age: string;
   difficulty: string;
   image: Image;
+  yearly?: Training;
 }

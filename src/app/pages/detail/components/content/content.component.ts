@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 import { Training } from '../../../../models/training';
 
@@ -10,6 +11,7 @@ import { Training } from '../../../../models/training';
 export class ContentComponent implements OnInit {
 
   @Input() training: Training;
+  @Input() isFullYear: FormControl;
 
   constructor() { }
 

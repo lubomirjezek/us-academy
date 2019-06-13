@@ -14,6 +14,17 @@
             <ui-dl>
               <ui-dt>Období</ui-dt>
               <ui-dd>{{ training?.season }}</ui-dd>
+              <ng-container *ngIf="training?.yearly">
+                <ui-dt>
+                  <ui-input
+                    type="checkbox"
+                    [control]="isFullYear"
+                  >
+                    Zarezervovat i druhé pololetí
+                  </ui-input>
+                </ui-dt>
+                <ui-dd *ngIf="isFullYear.value">{{ training?.yearly?.season }}</ui-dd>
+              </ng-container>
             </ui-dl>
           </ui-col>
           <ui-col>

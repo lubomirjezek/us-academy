@@ -15,6 +15,7 @@ import { PipesModule } from '../../modules/pipes/pipes.module';
 import { GridModule } from '../../ui/grid/grid.module';
 import { ContentComponent } from './components/content/content.component';
 import { ListModule } from '../../ui/list/list.module';
+import { InputModule } from '../../ui/input/input.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ListModule } from '../../ui/list/list.module';
     ButtonModule,
     PipesModule,
     GridModule,
-    ListModule
+    ListModule,
+    InputModule
   ]
 })
 export class DetailModule { }

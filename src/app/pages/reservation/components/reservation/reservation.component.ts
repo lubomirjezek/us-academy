@@ -19,6 +19,7 @@ export class ReservationComponent implements OnInit, OnDestroy {
   destroy: Subject<null> = new Subject<null>();
 
   training: Training;
+  isFullYear: boolean;
   form: FormGroup = new FormGroup({
     training_id:        new FormControl(null, Validators.required),
     name:               new FormControl(null, Validators.required),
@@ -87,6 +88,17 @@ export class ReservationComponent implements OnInit, OnDestroy {
 
     if (this.activatedRoute.snapshot.params.hasOwnProperty('training')) {
       this.fetchDetail(this.activatedRoute.snapshot.params.training);
+    }
+
+    if (this.activatedRoute.snapshot.params.hasOwnProperty('season')) {
+      switch (this.activatedRoute.snapshot.params.season) {
+        case 'rok':
+          this.isFullYear = true;
+          break;
+        case 'pololeti':
+          this.isFullYear = false;
+          break;
+      }
     }
   }
 

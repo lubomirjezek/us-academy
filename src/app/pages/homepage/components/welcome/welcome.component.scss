@@ -14,7 +14,7 @@
   font-family: map-get($theme, font-secondary);
   line-height: 1.1;
   margin: 0;
-  width: 40rem;
+  width: 36rem;
 
   @media (min-width: $breakpoint-s) {
     font-size: 10rem;
@@ -23,7 +23,7 @@
   }
 
   @media (min-width: $breakpoint-l) {
-    font-size: 16rem;
+    font-size: 13rem;
     letter-spacing: 2rem;
     width: 95rem;
   }
@@ -31,7 +31,7 @@
 
 .welcome__brand {
   color: map-get($theme, text-secondary);
-  font-weight: map-get($theme, font-weight-normal);
+  font-weight: map-get($theme, font-weight-bold);
   margin: 3rem 0 5rem 0;
 
   @media (min-height: $breakpoint-xs) {
@@ -43,7 +43,7 @@
   }
 
   @media (min-width: $breakpoint-s) {
-    font-size: 4rem;
+    font-size: 6rem;
   }
 }
 

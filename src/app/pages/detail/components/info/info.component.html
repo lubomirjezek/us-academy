@@ -8,7 +8,7 @@
     <div class="info__bar">
       <ui-row class="info__container">
         <ui-col class="info__col--price" vertical-center>
-          <span class="info__price">{{ training?.price }},-</span>
+          <span class="info__price">{{ isFullYear.value ? 2 * training?.price : training?.price }},-</span>
         </ui-col>
         <ui-col class="info__col--signed" vertical-center>
           <span class="info__signed">{{ [training?.paid, training?.capacity] | occupancy }}</span>

@@ -107,7 +107,11 @@ export class ReservationComponent implements OnInit, OnDestroy {
   }
 
   postReservation(): void {
-    this.store.dispatch(new PostReservation(this.form.value));
+    this.store.dispatch(new PostReservation({
+      ...this.form.value,
+      yearly: this.isFullYear
+    }));
+
     this.form.reset();
   }
 

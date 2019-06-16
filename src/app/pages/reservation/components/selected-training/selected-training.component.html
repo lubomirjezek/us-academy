@@ -7,7 +7,7 @@
       {{ training?.type | trainingTypeToString }}
     </div>
     <div class="selected-training__price">
-      {{ training?.price }},-
+      {{ isFullYear ? 2 * training?.price : training?.price }},-
     </div>
     <hr class="selected-training__spacer">
 
